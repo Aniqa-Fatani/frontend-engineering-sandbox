@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Premium Assignment: Kinesiology Performance Portal</title>
+</head>
+<body bgcolor="#F8FAFC" text="#0F172A" style="font-family: 'Segoe UI', Arial, sans-serif; margin: 40px;">
+
+    <!-- Main Container Table -->
+    <table width="680" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="border: 1px solid #E2E8F0; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);">
+        <tr>
+            <td style="padding: 45px;">
+                
+                <!-- Premium Portal Header -->
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <font size="6" color="#0F172A"><b>APEX KINETICS</b></font><br>
+                            <font size="2" color="#64748B">AI-Driven Sports Kinesiology & Performance Analytics Tracker</font>
+                        </td>
+                    </tr>
+                </table>
+                
+                <br><hr color="#E2E8F0" size="1"><br>
+
+                <!-- Start of Premium Form -->
+                <form action="#" method="post">
+
+                    <!-- PORTION 1: ATHLETE IDENTITY -->
+                    <fieldset style="border: 1px solid #CBD5E1; border-radius: 8px; padding: 22px; margin-bottom: 25px;">
+                        <legend><font color="#D97706" size="3"><b>01. Athlete Roster Profile</b></font></legend>
+                        <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                            <tr>
+                                <td width="32%"><label><b>Full Name:</b></label></td>
+                                <td><input type="text" name="athlete_name" placeholder="e.g., Captain Aniqa" required style="width: 100%; padding: 9px; border: 1px solid #CBD5E1; border-radius: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td><label><b>Official Email:</b></label></td>
+                                <td><input type="email" name="athlete_email" placeholder="name@apexathletics.com" required style="width: 100%; padding: 9px; border: 1px solid #CBD5E1; border-radius: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td><label><b>Sport Discipline:</b></label></td>
+                                <td><input type="text" name="sport_type" placeholder="e.g., Track & Field, Football" style="width: 100%; padding: 9px; border: 1px solid #CBD5E1; border-radius: 5px;"></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+
+                    <!-- PORTION 2: PHYSIOLOGICAL & ANATOMICAL METRICS -->
+                    <fieldset style="border: 1px solid #CBD5E1; border-radius: 8px; padding: 22px; margin-bottom: 25px;">
+                        <legend><font color="#D97706" size="3"><b>02. Musculoskeletal & Physiological Data</b></font></legend>
+                        <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                            <tr>
+                                <td width="32%"><label><b>Target Muscle Group:</b></label></td>
+                                <td>
+                                    <select name="muscle_group" style="width: 100%; padding: 9px; border: 1px solid #CBD5E1; border-radius: 5px; background-color: #FFFFFF;">
+                                        <option value="quads">Quadriceps & Patellar Chain</option>
+                                        <option value="rotator">Rotator Cuff & Shoulder Complex</option>
+                                        <option value="core">Core Stabilization Musculature</option>
+                                        <option value="wrist">Wrist Flexors & Pronator Teres</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label><b>Date of Biometric Assessment:</b></label></td>
+                                <td><input type="date" name="assessment_date" style="width: 100%; padding: 9px; border: 1px solid #CBD5E1; border-radius: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><label><b>Primary Training Goal:</b></label></td>
+                                <td>
+                                    <input type="radio" name="goal" value="hypertrophy" id="g1"> <label for="g1">Hypertrophy & Force Production</label><br>
+                                    <input type="radio" name="goal" value="range_of_motion" id="g2" checked> <label for="g2">Joint Range of Motion & Flexibility</label><br>
+                                    <input type="radio" name="goal" value="velocity" id="g3"> <label for="g3">Neuromuscular Velocity & Acceleration</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+
+                    <!-- PORTION 3: MOTION CAPTURE & AI PIPELINE CONFIGURATION -->
+                    <fieldset style="border: 1px solid #CBD5E1; border-radius: 8px; padding: 22px; margin-bottom: 25px;">
+                        <legend><font color="#D97706" size="3"><b>03. Motion Capture & Video Analytics</b></font></legend>
+                        <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                            <tr>
+                                <td width="32%"><label><b>AI Tracking Frame Rate:</b></label></td>
+                                <td>
+                                    <select name="fps_rate" style="width: 100%; padding: 9px; border: 1px solid #CBD5E1; border-radius: 5px; background-color: #FFFFFF;">
+                                        <option value="60">60 Hz Standard Video Analytics</option>
+                                        <option value="120" selected>120 Hz Advanced High-Speed Capture</option>
+                                        <option value="240">240 Hz Cinematic Ultra-High Precision</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top"><label><b>Active Joint Markers:</b></label></td>
+                                <td>
+                                    <input type="checkbox" name="markers" value="shoulder" checked> <label>Shoulder Girdle (Acromion Process)</label><br>
+                                    <input type="checkbox" name="markers" value="wrist" checked> <label>Wrist Complex (Styloid Process)</label><br>
+                                    <input type="checkbox" name="markers" value="knee"> <label>Knee Joint (Lateral Epicondyle)</label><br>
+                                    <input type="checkbox" name="markers" value="ankle"> <label>Ankle Complex (Lateral Malleolus)</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+
+                    <!-- PORTION 4: SECURITY PROTOCOL & LAB ACCESS -->
+                    <fieldset style="border: 1px solid #CBD5E1; border-radius: 8px; padding: 22px; margin-bottom: 25px;">
+                        <legend><font color="#D97706" size="3"><b>04. Security Cryptography & Verification</b></font></legend>
+                        <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                            <tr>
+                                <td width="32%"><label><b>Lab Key Password:</b></label></td>
+                                <td><input type="password" name="lab_key" placeholder="••••••••" required style="width: 100%; padding: 9px; border: 1px solid #CBD5E1; border-radius: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td><label><b>Biometric Sandbox Token:</b></label></td>
+                                <td>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td width="35%" bgcolor="#F1F5F9" align="center" style="border: 1px solid #E2E8F0; border-radius: 5px; padding: 9px;">
+                                                <i><font color="#475569" face="Courier"><b>A P E X 9 9</b></font></i>
+                                            </td>
+                                            <td width="5%">&nbsp;</td>
+                                            <td><input type="text" name="token_input" placeholder="Verify token" required style="width: 100%; padding: 9px; border: 1px solid #CBD5E1; border-radius: 5px;"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+
+                    <!-- PORTION 5: RISK SCREENING & AUTHORIZATION -->
+                    <fieldset style="border: 1px solid #CBD5E1; border-radius: 8px; padding: 22px; margin-bottom: 35px;">
+                        <legend><font color="#D97706" size="3"><b>05. Clinical Screening Notes & Waiver</b></font></legend>
+                        <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                            <tr>
+                                <td valign="top" width="32%"><label><b>Pathology / Injury History:</b></label></td>
+                                <td><textarea name="injury_notes" rows="3" placeholder="Detail any historical ligament sprains, muscle tears, or structural pathologies to exclude from AI stress-testing..." style="width: 100%; padding: 9px; border: 1px solid #CBD5E1; border-radius: 5px; resize: none;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="checkbox" name="waiver_consent" id="waiver_consent" required> 
+                                    <label for="waiver_consent"><font size="2">I authorize the kinematic tracking pipeline to log and process my biomechanical data.</font></label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <!-- Submission Bar -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="right">
+                                <input type="reset" value="Reset Pipeline" style="background-color: #F1F5F9; color: #475569; border: 1px solid #CBD5E1; padding: 13px 26px; border-radius: 6px; cursor: pointer; font-weight: bold; margin-right: 12px;">
+                                <input type="submit" value="Initialize AI Tracking" style="background-color: #0F172A; color: #FFFFFF; border: none; padding: 13px 30px; border-radius: 6px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.2);">
+                            </td>
+                        </tr>
+                    </table>
+
+                </form>
+                <!-- End of Premium Form -->
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

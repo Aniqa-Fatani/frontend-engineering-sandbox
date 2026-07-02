@@ -1,0 +1,128 @@
+/* ==========================================================================
+   1. GLOBAL CANVAS SETUP
+   ========================================================================== */
+body {
+    margin: 0;
+    padding: 60px 24px;
+    /* Requirement: Favorite background color using HSL (Crisp, clean tech-gray) */
+    background-color: hsl(210, 20%, 98%);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Base box-sizing rule for precise layout calculations */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Main workspace containment frame */
+.workspace-wrapper {
+    width: 100%;
+    max-width: 1140px;
+}
+
+/* ==========================================================================
+   2. DOSSIER HEADER & NAME STYLING
+   ========================================================================== */
+.dossier-header {
+    /* Requirement: Situated legibly, completely clear of the top edge */
+    margin-bottom: 48px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 24px;
+}
+
+.system-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.dossier-header h1 {
+    /* Requirement: Color font using a explicit named color */
+    color: DarkSlateGray;
+    
+    /* Requirement: At least 4 distinct CSS declarations changing appearance */
+    font-family: 'Inter', sans-serif; /* 1. Clean technical sans font */
+    font-size: 3rem;                  /* 2. Heavy premium text footprint */
+    font-weight: 300;                 /* 3. Ultra-light professional weight */
+    letter-spacing: -1.5px;           /* 4. Compressed letter-spacing layout */
+    margin: 0;
+}
+
+/* ==========================================================================
+   3. SIDE-BY-SIDE SIDE GRID SYSTEM
+   ========================================================================== */
+.dossier-grid {
+    /* Requirement: These paragraph blocks should be aligned side by side */
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Structural dossier cards */
+.data-card {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 32px 24px;
+    border-radius: 6px;
+    position: relative;
+}
+
+/* Meta-tags inside the cards to emphasize the blueprint aesthetic */
+.card-meta {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: 8px;
+}
+
+/* ==========================================================================
+   4. INDIVIDUAL TEXT COLOR & BLOCK DECLARATIONS
+   ========================================================================== */
+
+/* --- Block 1: Technical Sans Accent --- */
+.hsl-text {
+    /* Requirement: Declare color using HSL */
+    color: hsl(215, 25%, 27%); /* Deep Slate Blue */
+    
+    /* Requirement: At least 4 CSS declarations changing text appearance */
+    font-family: 'Inter', sans-serif; /* 1. Default system typeface */
+    font-size: 1.05rem;               /* 2. Structured body reading size */
+    line-height: 1.65;                /* 3. Balanced line leading space */
+    font-weight: 400;                 /* 4. Normal weight definition */
+}
+
+/* --- Block 2: Editorial Serif Contrast --- */
+.rgb-text {
+    /* Requirement: Declare color using RGB */
+    color: rgb(112, 66, 41); /* Rich Muted Espresso */
+    
+    /* Requirement: At least 4 CSS declarations changing text appearance */
+    font-family: 'Playfair Display', serif; /* 1. Swapped into standard serif style */
+    font-size: 1.15rem;                     /* 2. Upscaled text presence */
+    line-height: 1.5;                       /* 3. Compressed line leading */
+    font-style: italic;                     /* 4. Complete italic text emphasis */
+}
+
+/* --- Block 3: True Code System Monospace --- */
+.hex-text {
+    /* Requirement: Declare color using HEX */
+    color: #2e4d36; /* Deep Architectural Sage Green */
+    
+    /* Requirement: At least 4 CSS declarations changing text appearance */
+    font-family: monospace;           /* 1. Monospace terminal typeface code */
+    font-size: 0.95rem;               /* 2. Clean, compact font size scales */
+    line-height: 1.8;                 /* 3. Generous vertical line leading */
+    text-transform: lowercase;        /* 4. Absolute minimal lowercase layout */
+}

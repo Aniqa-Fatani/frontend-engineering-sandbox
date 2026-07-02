@@ -1,0 +1,164 @@
+/* --- Core Global Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 3rem 1.5rem;
+}
+
+/* --- Header Architecture --- */
+.portfolio-header {
+    max-width: 1100px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.portfolio-header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: #111111;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-header .subtitle {
+    font-size: 1.05rem;
+    color: #666666;
+    max-width: 600px;
+}
+
+.meta-badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #555555;
+    background-color: #f5f5f5;
+}
+
+.editorial-divider {
+    max-width: 1100px;
+    margin: 0 auto 3.5rem auto;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* --- Gallery Layout Grid --- */
+.gallery-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* --- Premium Project Cards --- */
+.project-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    border-color: #111111;
+}
+
+/* Highlight Variant for Active Builds */
+.active-build {
+    border: 1px dashed #111111;
+    background-color: #fafafa;
+}
+
+.card-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #0066cc;
+    background: #e6f0ff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+}
+
+.project-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #111111;
+    margin-bottom: 0.75rem;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Metadata Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tags span {
+    font-size: 0.7rem;
+    color: #777777;
+    background: #f0f0f0;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+}
+
+/* Micro-interaction Links */
+.view-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #111111;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    align-self: flex-start;
+    transition: border-color 0.2s ease;
+}
+
+.view-link:hover {
+    border-color: #111111;
+}
+
+/* --- Footer Frame --- */
+.portfolio-footer {
+    max-width: 1100px;
+    margin: 5rem auto 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.portfolio-footer p {
+    font-size: 0.8rem;
+    color: #999999;
+}
