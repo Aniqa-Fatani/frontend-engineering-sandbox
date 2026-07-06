@@ -1,0 +1,313 @@
+/* ==========================================================================
+   1. PREMIUM NEON AURORA VARIABLES & GLOBAL THEME
+   ========================================================================== */
+:root {
+    /* Cyber-Midnight Canvas */
+    --body-bg: #140f26;
+    --panel-bg: #1a1532;
+    --text-glow-light: #f1ebff;
+    --text-muted-cyan: #7be4ff;
+    
+    /* Neon Block Row Layouts */
+    --bg-row-pink: #2a1835;
+    --bg-row-purple: #1f183c;
+    --bg-row-blue: #16243d;
+    
+    /* Active Glow Triggers */
+    --neon-pink: #ff529a;
+    --neon-purple: #9d4edd;
+    --neon-cyan: #00f0ff;
+    --neon-green: #39ff14;
+
+    --font-bubble: 'Fredoka', sans-serif;
+    --font-clean: 'Quicksand', sans-serif;
+}
+
+/* Global Smooth Engine Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--text-glow-light);
+    font-family: var(--font-clean);
+    padding: 4.5rem 2rem 2rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==========================================================================
+   2. INFINITE EXPANDING MOVING UPPERLINE BANNER
+   ========================================================================== */
+.moving-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, var(--neon-purple) 0%, var(--neon-pink) 50%, var(--neon-cyan) 100%);
+    color: #ffffff;
+    font-family: var(--font-bubble);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(157, 78, 221, 0.4);
+}
+
+.banner-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollMarquee 25s linear infinite;
+}
+
+@keyframes scrollMarquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-33.33%, 0, 0); }
+}
+
+/* ==========================================================================
+   3. PREMIUM HEADER (AURORA SKY DESIGN)
+   ========================================================================== */
+.diary-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    background: var(--panel-bg);
+    border-radius: 36px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border: 3px solid #2a224d;
+}
+
+.diary-header {
+    background: linear-gradient(135deg, #3c165a 0%, #17123a 50%, #0d384d 100%);
+    padding: 3.5rem 2.5rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 3px solid #2a224d;
+}
+
+/* Ambient Cloud Glow Elements */
+.diary-header::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background: var(--neon-pink);
+    filter: blur(90px);
+    opacity: 0.3;
+    top: -20px;
+    left: 10%;
+}
+
+.main-title {
+    font-family: var(--font-bubble);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 82, 154, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.animated-icon {
+    display: inline-block;
+    animation: waveFruit 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes waveFruit {
+    0% { transform: rotate(-10deg) scale(1); }
+    100% { transform: rotate(15deg) scale(1.15); }
+}
+
+.header-status-clock {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    border: 2px solid rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+}
+
+/* ==========================================================================
+   4. BLOCKED THEME HEADERS & ROW ARCHITECTURE
+   ========================================================================== */
+.diary-grid-container {
+    padding: 2.5rem;
+    overflow-x: auto;
+}
+
+.diary-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Header Category Blocks */
+.diary-table th {
+    font-family: var(--font-bubble);
+    font-size: 1.1rem;
+    padding: 1.2rem 1rem;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+}
+
+.th-day { background-color: #2b3a67; border-radius: 16px 0 0 16px; }
+.th-breakfast { background-color: #561d3b; }
+.th-lunch { background-color: #5c3516; }
+.th-dinner { background-color: #3f1d63; }
+.th-benefits { background-color: #221c3d; color: var(--text-muted-cyan) !important; }
+.th-task { background-color: #541d1d; border-radius: 0 16px 16px 0; }
+
+/* Thick separation lines to keep block structure clean */
+.diary-table tbody tr {
+    border-bottom: 12px solid var(--panel-bg);
+}
+
+/* Row-specific color assignments */
+.row-aurora-pink td { background-color: var(--bg-row-pink); }
+.row-aurora-purple td { background-color: var(--bg-row-purple); }
+.row-aurora-blue td { background-color: var(--bg-row-blue); }
+
+.day-cell {
+    font-family: var(--font-bubble);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+}
+
+/* ==========================================================================
+   5. PREMIUM FOOD CARDS AND HOVER SCALE SYSTEM
+   ========================================================================== */
+.food-card {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* Ultra Smooth Scale Up Animation on Hover */
+.food-card:hover {
+    transform: scale(1.07) translateY(-4px);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Target borders on active hover state */
+.row-aurora-pink .food-card:hover { border-color: var(--neon-pink); box-shadow: 0 10px 25px rgba(255, 82, 154, 0.2); }
+.row-aurora-purple .food-card:hover { border-color: var(--neon-purple); box-shadow: 0 10px 25px rgba(157, 78, 221, 0.2); }
+.row-aurora-blue .food-card:hover { border-color: var(--neon-cyan); box-shadow: 0 10px 25px rgba(0, 240, 255, 0.2); }
+
+.food-emoji {
+    font-size: 2.3rem;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.food-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Micro Action Buttons Layout */
+.cell-actions {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.3rem;
+}
+
+.btn-eat, .btn-fav {
+    flex: 1;
+    border: none;
+    padding: 0.45rem 0.6rem;
+    font-family: var(--font-clean);
+    font-weight: 700;
+    font-size: 0.75rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.btn-eat { background-color: rgba(255, 255, 255, 0.12); }
+.btn-eat:hover { background-color: #ffffff; color: var(--body-bg); }
+
+.btn-fav { background-color: rgba(255, 82, 154, 0.1); color: var(--neon-pink); }
+.btn-fav:hover { background-color: var(--neon-pink); color: #ffffff; }
+
+/* Custom Benefit System Bullets */
+.benefit-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.benefit-list li {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #b1a9cc;
+    padding: 0.25rem 0;
+    position: relative;
+    padding-left: 16px;
+}
+
+.benefit-list li::before {
+    content: "⚡";
+    font-size: 0.75rem;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--neon-cyan);
+}
+
+/* ==========================================================================
+   6. TASK STATUS GLOW PULSE SYSTEM
+   ========================================================================== */
+.status-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-badge {
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-family: var(--font-bubble);
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.state-complete {
+    background-color: rgba(57, 255, 20, 0.1);
+    color: var(--neon-green);
+    border: 1px solid rgba(57, 255, 20, 0.3);
+}
+
+.state-notyet {
+    background-color: rgba(255, 82, 154, 0.1);
+    color: var(--neon-pink);
+    border: 1px solid rgba(255, 82, 154, 0.3);
+    animation: neonPulseGlow 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes neonPulseGlow {
+    0% { box-shadow: 0 0 5px rgba(255, 82, 154, 0.2); transform: scale(1); }
+    100% { box-shadow: 0 0 15px rgba(255, 82, 154, 0.6); transform: scale(1.03); }
+}
