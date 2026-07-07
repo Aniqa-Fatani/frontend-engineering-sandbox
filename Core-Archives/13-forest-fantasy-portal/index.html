@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Fantasy - Portal</title>
+    <style>
+        /* Import a clean, readable fantasy/gaming font combination */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Marcellus&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Marcellus', serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Placeholder background matching the deep green forest theme colors */
+            background: radial-gradient(circle at center, #14281d 0%, #070d0a 100%);
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        /* Container box */
+        .container {
+            position: relative;
+            width: 420px;
+            min-height: 580px;
+            background: rgba(15, 30, 22, 0.65);
+            border: 2px solid #5c8358;
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(92, 131, 88, 0.3);
+            padding: 35px 30px;
+            overflow: hidden;
+        }
+
+        /* Title Area */
+        .title-area {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .title-area h1 {
+            font-family: 'Cinzel', serif;
+            color: #d4af37; /* Antique Gold */
+            font-size: 26px;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Pure CSS Switcher Toggles */
+        .mode-toggle {
+            display: flex;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(92, 131, 88, 0.4);
+            position: relative;
+        }
+
+        .mode-toggle label {
+            flex: 1;
+            text-align: center;
+            padding: 10px 0;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            cursor: pointer;
+            z-index: 2;
+            transition: color 0.3s ease;
+        }
+
+        /* Hidden Core Radio inputs that drive our CSS state */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Dynamic Sliding Selector Tab background overlay */
+        .selector-bg {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: calc(50% - 4px);
+            height: calc(100% - 4px);
+            background: linear-gradient(135deg, #446840, #274024);
+            border-radius: 28px;
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            border: 1px solid #7cb176;
+            z-index: 1;
+        }
+
+        /* CSS Rules mapping tab selection shifts */
+        #login-radio:checked ~ .mode-toggle .selector-bg {
+            transform: translateX(0);
+        }
+        #signup-radio:checked ~ .mode-toggle .selector-bg {
+            transform: translateX(100%);
+        }
+
+        #login-radio:checked ~ .mode-toggle label[for="login-radio"],
+        #signup-radio:checked ~ .mode-toggle label[for="signup-radio"] {
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Form view panel containers */
+        .forms-wrapper {
+            width: 200%;
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        /* Shift view block left or right based on which radio button is active */
+        #login-radio:checked ~ .forms-wrapper {
+            transform: translateX(0%);
+        }
+        #signup-radio:checked ~ .forms-wrapper {
+            transform: translateX(-50%);
+        }
+
+        form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Hide the view state out of focus gently using opacity */
+        #login-radio:checked ~ .forms-wrapper .signup-form { opacity: 0; pointer-events: none; }
+        #signup-radio:checked ~ .forms-wrapper .login-form { opacity: 0; pointer-events: none; }
+        #login-radio:checked ~ .forms-wrapper .login-form { opacity: 1; }
+        #signup-radio:checked ~ .forms-wrapper .signup-form { opacity: 1; }
+
+        /* Group Elements Styles */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        .input-group label {
+            color: #a3b899;
+            font-size: 13px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 11px 14px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(92, 131, 88, 0.5);
+            border-radius: 6px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            border-color: #d4af37;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Gender Radio inline format styling */
+        .gender-container {
+            display: flex;
+            gap: 20px;
+            padding: 5px 0;
+        }
+
+        .gender-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .gender-option input[type="radio"] {
+            display: inline-block;
+            accent-color: #d4af37;
+            cursor: pointer;
+        }
+
+        /* Actions and Buttons */
+        .forgot-link {
+            align-self: flex-end;
+            color: #8fa885;
+            font-size: 12px;
+            text-decoration: none;
+            margin-top: -6px;
+            margin-bottom: 20px;
+        }
+
+        .forgot-link:hover {
+            color: #d4af37;
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            background: linear-gradient(135deg, #d4af37, #aa841c);
+            border: none;
+            border-radius: 6px;
+            color: #14281d;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            margin-top: 10px;
+            transition: 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #f1cc5b, #c49a26);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="title-area">
+            <h1>FOREST FANTASY</h1>
+        </div>
+
+        <input type="radio" id="login-radio" name="form-switch" checked>
+        <input type="radio" id="signup-radio" name="form-switch">
+
+        <div class="mode-toggle">
+            <div class="selector-bg"></div>
+            <label for="login-radio">LOGIN</label>
+            <label for="signup-radio">SIGN UP</label>
+        </div>
+
+        <div class="forms-wrapper">
+            
+            <form class="login-form" action="#">
+                <div class="input-group">
+                    <label>Username or Email</label>
+                    <input type="text" placeholder="Enter credentials..." required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password..." required>
+                </div>
+                <a href="#" class="forgot-link">Forgot password?</a>
+                <button type="submit" class="submit-btn">ENTER AREA</button>
+            </form>
+
+            <form class="signup-form" action="#">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" placeholder="Choose username" required>
+                </div>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Your mobile string" required>
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Your active inbox" required>
+                </div>
+                <div class="input-group">
+                    <label>Date of Birth</label>
+                    <input type="date" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Gender</label>
+                    <div class="gender-container">
+                        <label class="gender-option">
+                            <input type="radio" name="gender" value="male" checked> Male
+                        </label>
+                        <label class="gender-option">
+                            <input type="radio" name="gender" value="female"> Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Country</label>
+                    <select required>
+                        <option value="" disabled selected>Select Country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="pk">Pakistan</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">CREATE AREA</button>
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>
