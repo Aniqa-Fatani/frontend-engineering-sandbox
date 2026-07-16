@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charcoal & Clove — Order Online</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-main">Charcoal</span>
+        <span class="logo-amp">&amp;</span>
+        <span class="logo-sub">Clove</span>
+        <span class="logo-tag">Restaurant</span>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="publications.html">Publications</a>
+        <a href="branches.html">Branches</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#login" class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <a href="franchise.html" class="btn-franchise">Get a Franchise</a>
+        <a href="#cart" class="icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-badge">0</span>
+        </a>
+        <a href="order.html" class="btn-order active">Order Online</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== LOGIN MODAL ===== -->
+  <div class="modal-overlay" id="login">
+    <div class="modal-box">
+      <a href="#" class="modal-close" aria-label="Close">&times;</a>
+      <div class="modal-tabs">
+        <span class="modal-tab active">Login</span>
+        <a href="#signup" class="modal-tab-link">Sign up</a>
+      </div>
+      <label class="modal-label">Email</label>
+      <input type="email" class="modal-input" placeholder="you@example.com">
+      <label class="modal-label">Password</label>
+      <input type="password" class="modal-input" placeholder="********">
+      <a href="#" class="modal-forgot">Forgot Password?</a>
+      <button type="button" class="modal-submit">Login</button>
+    </div>
+  </div>
+
+  <!-- ===== SIGN UP MODAL ===== -->
+  <div class="modal-overlay" id="signup">
+    <div class="modal-box">
+      <a href="#" class="modal-close" aria-label="Close">&times;</a>
+      <div class="modal-tabs">
+        <a href="#login" class="modal-tab-link">Login</a>
+        <span class="modal-tab active">Sign up</span>
+      </div>
+      <label class="modal-label">Full Name</label>
+      <input type="text" class="modal-input" placeholder="Your name">
+      <label class="modal-label">Email</label>
+      <input type="email" class="modal-input" placeholder="you@example.com">
+      <label class="modal-label">Password</label>
+      <input type="password" class="modal-input" placeholder="Create a password">
+      <button type="button" class="modal-submit">Sign Up</button>
+    </div>
+  </div>
+
+  <!-- ===== CART PANEL ===== -->
+  <div class="modal-overlay cart-overlay" id="cart">
+    <div class="cart-panel">
+      <div class="cart-panel-head">
+        <a href="#" class="modal-close-inline" aria-label="Close">&times;</a>
+        <h3>Your Cart</h3>
+      </div>
+      <div class="cart-panel-body">
+        <p class="cart-empty">Your cart is empty</p>
+      </div>
+      <div class="cart-panel-foot">
+        <p class="cart-min-note">Min order amount must be greater than Rs 1,500</p>
+        <button type="button" class="cart-checkout">Checkout Rs 0.00</button>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <p class="eyebrow">Order online</p>
+      <h1 class="page-title">Our Menu</h1>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORY QUICK NAV ===== -->
+  <nav class="cat-nav" aria-label="Menu categories">
+    <a href="#soups">Soups</a>
+    <a href="#sharing">Sharing Bites</a>
+    <a href="#sandwiches">Sandwiches</a>
+    <a href="#burgers">Burgers</a>
+    <a href="#chicken">Chicken</a>
+    <a href="#chinese">Chinese</a>
+    <a href="#pizza">Pizza</a>
+    <a href="#steaks">Beef Steaks</a>
+    <a href="#bbq">BBQ &amp; Kababs</a>
+    <a href="#traditional">Traditional</a>
+    <a href="#bread">Naan &amp; Bread</a>
+    <a href="#salads">Salads</a>
+    <a href="#meals">Individual Meals</a>
+    <a href="#desserts">Desserts</a>
+    <a href="#drinks">Drinks</a>
+    <a href="#kids">Children's Menu</a>
+  </nav>
+
+  <section class="menu">
+    <div class="menu-inner">
+
+      <!-- SOUPS -->
+      <h3 id="soups" class="menu-cat">Our Signature Soups</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=400&fit=crop" alt="Smoked Lentil Soup">
+          <div class="menu-item-body"><h4>Smoked Lentil Soup</h4><p class="price">Rs 780.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=400&fit=crop" alt="Roast Pumpkin Soup">
+          <div class="menu-item-body"><h4>Roast Pumpkin Soup</h4><p class="price">Rs 750.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1583835746434-cf1534674b41?w=400&h=400&fit=crop" alt="Chicken & Corn Broth">
+          <div class="menu-item-body"><h4>Chicken &amp; Corn Broth</h4><p class="price">Rs 690.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- SHARING BITES -->
+      <h3 id="sharing" class="menu-cat">Sharing Bites</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=400&h=400&fit=crop" alt="Charcoal Chicken Strips">
+          <div class="menu-item-body"><h4>Charcoal Chicken Strips (3 Pcs)</h4><p class="price">Rs 890.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=400&fit=crop" alt="Loaded Ember Fries">
+          <div class="menu-item-body"><h4>Loaded Ember Fries</h4><p class="price">Rs 820.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400&h=400&fit=crop" alt="Spiced Chicken Loaded Fries">
+          <div class="menu-item-body"><h4>Spiced Chicken Loaded Fries</h4><p class="price">Rs 1,290.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- SANDWICHES -->
+      <h3 id="sandwiches" class="menu-cat">Sandwiches</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=400&h=400&fit=crop" alt="Grilled Chicken Sandwich">
+          <div class="menu-item-body"><h4>Grilled Chicken Sandwich</h4><p class="price">Rs 1,150.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1567234669003-dce7a7a88821?w=400&h=400&fit=crop" alt="Clove Club Sandwich">
+          <div class="menu-item-body"><h4>Clove Club Sandwich</h4><p class="price">Rs 1,190.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=400&h=400&fit=crop" alt="Smoked Chicken Sandwich">
+          <div class="menu-item-body"><h4>Smoked Chicken Sandwich</h4><p class="price">Rs 1,090.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- BURGERS -->
+      <h3 id="burgers" class="menu-cat">Our Famous Burgers</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop" alt="Ember Beef Burger">
+          <div class="menu-item-body"><h4>Ember Beef Burger</h4><p class="price">Rs 2,150.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=400&h=400&fit=crop" alt="Slow Roast Brisket Burger">
+          <div class="menu-item-body"><h4>Slow Roast Brisket Burger</h4><p class="price">Rs 2,050.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=400&fit=crop" alt="Double Cheese Clove Burger">
+          <div class="menu-item-body"><h4>Double Cheese Clove Burger</h4><p class="price">Rs 1,890.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- CHICKEN -->
+      <h3 id="chicken" class="menu-cat">Chicken</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=400&fit=crop" alt="Charcoal Chicken Tikka">
+          <div class="menu-item-body"><h4>Charcoal Chicken Tikka</h4><p class="price">Rs 890.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400&h=400&fit=crop" alt="Herb Stuffed Chicken Breast">
+          <div class="menu-item-body"><h4>Herb Stuffed Chicken Breast</h4><p class="price">Rs 1,890.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=400&h=400&fit=crop" alt="Golden Chicken Nuggets">
+          <div class="menu-item-body"><h4>Golden Chicken Nuggets (8 Pcs)</h4><p class="price">Rs 1,690.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- CHINESE -->
+      <h3 id="chinese" class="menu-cat">Chinese</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1626804475297-411f8b6acd47?w=400&h=400&fit=crop" alt="Beef Chilli Dry">
+          <div class="menu-item-body"><h4>Beef Chilli Dry</h4><p class="price">Rs 2,250.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=400&fit=crop" alt="Chicken Manchurian">
+          <div class="menu-item-body"><h4>Chicken Manchurian</h4><p class="price">Rs 1,690.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=400&fit=crop" alt="Vegetable Fried Rice">
+          <div class="menu-item-body"><h4>Vegetable Fried Rice</h4><p class="price">Rs 990.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- PIZZA -->
+      <h3 id="pizza" class="menu-cat">Pizza</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=400&fit=crop" alt="Margherita Pizza">
+          <div class="menu-item-body"><h4>Margherita Pizza</h4><p class="price">Rs 1,990.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" alt="Smoked Chicken Pizza">
+          <div class="menu-item-body"><h4>Smoked Chicken Pizza</h4><p class="price">Rs 2,290.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1571066811602-716837d681de?w=400&h=400&fit=crop" alt="Roast Vegetable Pizza">
+          <div class="menu-item-body"><h4>Roast Vegetable Pizza</h4><p class="price">Rs 2,090.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- BEEF STEAKS -->
+      <h3 id="steaks" class="menu-cat">Beef Steaks</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=400&h=400&fit=crop" alt="Classic Tenderloin Steak">
+          <div class="menu-item-body"><h4>Classic Tenderloin Steak</h4><p class="price">Rs 3,400.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=400&fit=crop" alt="Charcoal Fillet Steak">
+          <div class="menu-item-body"><h4>Charcoal Fillet Steak</h4><p class="price">Rs 3,500.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1615937722923-67f6deaf2cc9?w=400&h=400&fit=crop" alt="Black Pepper Steak">
+          <div class="menu-item-body"><h4>Black Pepper Steak</h4><p class="price">Rs 3,600.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- BBQ & KABABS -->
+      <h3 id="bbq" class="menu-cat">BBQ &amp; Kababs</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&h=400&fit=crop" alt="Clove-Spiced Lamb Chops">
+          <div class="menu-item-body"><h4>Clove-Spiced Lamb Chops</h4><p class="price">Rs 1,450.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400&h=400&fit=crop" alt="Seekh Kabab">
+          <div class="menu-item-body"><h4>Seekh Kabab (4 Pcs)</h4><p class="price">Rs 990.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=400&fit=crop" alt="Mixed Charcoal Grill Platter">
+          <div class="menu-item-body"><h4>Mixed Charcoal Grill Platter</h4><p class="price">Rs 3,290.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- TRADITIONAL -->
+      <h3 id="traditional" class="menu-cat">Traditional Dishes</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=400&fit=crop" alt="Mutton Handi">
+          <div class="menu-item-body"><h4>Mutton Handi (Half)</h4><p class="price">Rs 3,690.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=400&fit=crop" alt="Chicken Karahi">
+          <div class="menu-item-body"><h4>Chicken Karahi (Half)</h4><p class="price">Rs 1,690.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=400&fit=crop" alt="Achari Boneless Chicken">
+          <div class="menu-item-body"><h4>Achari Boneless Chicken</h4><p class="price">Rs 1,890.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- NAAN & BREAD -->
+      <h3 id="bread" class="menu-cat">Naan &amp; Bread</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=400&h=400&fit=crop" alt="Roti">
+          <div class="menu-item-body"><h4>Roti</h4><p class="price">Rs 80.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=400&fit=crop" alt="Tandoori Paratha">
+          <div class="menu-item-body"><h4>Tandoori Paratha</h4><p class="price">Rs 290.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=400&fit=crop" alt="Garlic & Dhania Naan">
+          <div class="menu-item-body"><h4>Garlic &amp; Dhania Naan</h4><p class="price">Rs 260.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- SALADS -->
+      <h3 id="salads" class="menu-cat">Salads</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=400&fit=crop" alt="Garden Salad Bar">
+          <div class="menu-item-body"><h4>Garden Salad Bar (Per Serving)</h4><p class="price">Rs 690.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=400&fit=crop" alt="Citrus Chicken Salad">
+          <div class="menu-item-body"><h4>Citrus Chicken Salad</h4><p class="price">Rs 1,190.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?w=400&h=400&fit=crop" alt="House Coleslaw">
+          <div class="menu-item-body"><h4>House Coleslaw</h4><p class="price">Rs 390.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- INDIVIDUAL MEALS -->
+      <h3 id="meals" class="menu-cat">Smart Individual Meals</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=400&fit=crop" alt="Classic Meal">
+          <div class="menu-item-body"><h4>Classic Meal</h4><p class="price">Rs 1,590.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=400&fit=crop" alt="Chinese Meal">
+          <div class="menu-item-body"><h4>Chinese Meal</h4><p class="price">Rs 2,090.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=400&h=400&fit=crop" alt="Deluxe Meal">
+          <div class="menu-item-body"><h4>Deluxe Meal</h4><p class="price">Rs 1,890.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- DESSERTS -->
+      <h3 id="desserts" class="menu-cat">Desserts</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1567892737950-30c4db37cd89?w=400&h=400&fit=crop" alt="Seasonal Fruit Crumble">
+          <div class="menu-item-body"><h4>Seasonal Fruit Crumble</h4><p class="price">Rs 890.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1535920527002-b35e96722eb9?w=400&h=400&fit=crop" alt="Classic Tiramisu">
+          <div class="menu-item-body"><h4>Classic Tiramisu</h4><p class="price">Rs 890.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=400&fit=crop" alt="Date Cake with Toffee Sauce">
+          <div class="menu-item-body"><h4>Date Cake with Toffee Sauce</h4><p class="price">Rs 990.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- DRINKS -->
+      <h3 id="drinks" class="menu-cat">Drinks</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop" alt="Iced Coffee">
+          <div class="menu-item-body"><h4>Iced Coffee with Cream</h4><p class="price">Rs 690.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400&h=400&fit=crop" alt="Fresh Lime Soda">
+          <div class="menu-item-body"><h4>Fresh Lime Soda</h4><p class="price">Rs 290.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1560023907-5f339617ea30?w=400&h=400&fit=crop" alt="Mineral Water">
+          <div class="menu-item-body"><h4>Mineral Water</h4><p class="price">Rs 120.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <!-- CHILDREN'S MENU -->
+      <h3 id="kids" class="menu-cat">Children's Menu</h3>
+      <div class="menu-grid">
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=400&fit=crop" alt="Junior Chicken Burger">
+          <div class="menu-item-body"><h4>Junior Chicken Burger</h4><p class="price">Rs 990.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1553909489-cd47e0907980?w=400&h=400&fit=crop" alt="Junior Chicken Sandwich">
+          <div class="menu-item-body"><h4>Junior Chicken Sandwich (2 Pcs)</h4><p class="price">Rs 990.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+        <article class="menu-item">
+          <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=400&h=400&fit=crop" alt="Junior Fried Chicken Drumsticks">
+          <div class="menu-item-body"><h4>Junior Fried Chicken Drumsticks (2 Pcs)</h4><p class="price">Rs 990.00</p><button class="btn-add" type="button">+ Add</button></div>
+        </article>
+      </div>
+
+      <div class="cart-bar">
+        <span>0 items</span>
+        <span class="cart-total">Rs 0.00</span>
+        <button class="btn-order" type="button">View Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col footer-about">
+        <div class="footer-brand">
+          <span class="logo-main">Charcoal</span><span class="logo-amp">&amp;</span><span class="logo-sub">Clove</span>
+        </div>
+        <p class="footer-desc">Charcoal &amp; Clove is where slow fire meets real spice — a table for family dinners, business lunches, and every occasion worth remembering. From our first grill to three branches across the city, every plate still leaves the kitchen the way it would at our founder's own table.</p>
+        <div class="footer-legal">
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Site Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="publications.html">Publications</a>
+        <a href="franchise.html">Get a Franchise</a>
+        <a href="branches.html">Branches</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p class="footer-label">Head Office Address</p>
+        <p class="footer-value">Charcoal &amp; Clove HQ<br>14 Riverside Walk, Downtown</p>
+        <p class="footer-label">Head Office Number</p>
+        <p class="footer-value">+1 234 567 890</p>
+        <p class="footer-label">Email Address</p>
+        <p class="footer-value">hello@charcoalandclove.com</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3.1 0 4.1.1 1.1 0 1.8.2 2.3.4.6.2 1 .5 1.5 1 .4.4.7.9 1 1.5.2.5.4 1.2.4 2.3.1 1 .1 1.4.1 4.1s0 3.1-.1 4.1c0 1.1-.2 1.8-.4 2.3-.2.6-.5 1-1 1.5-.4.4-.9.7-1.5 1-.5.2-1.2.4-2.3.4-1 .1-1.4.1-4.1.1s-3.1 0-4.1-.1c-1.1 0-1.8-.2-2.3-.4-.6-.2-1-.5-1.5-1-.4-.4-.7-.9-1-1.5-.2-.5-.4-1.2-.4-2.3C2 15.1 2 14.7 2 12s0-3.1.1-4.1c0-1.1.2-1.8.4-2.3.2-.6.5-1 1-1.5.4-.4.9-.7 1.5-1 .5-.2 1.2-.4 2.3-.4C8.9 2 9.3 2 12 2Zm0 1.8c-2.7 0-3 0-4 .1-.9 0-1.4.2-1.7.3-.4.2-.7.3-1 .6-.3.3-.5.6-.6 1-.1.3-.3.8-.3 1.7-.1 1-.1 1.3-.1 4s0 3 .1 4c0 .9.2 1.4.3 1.7.2.4.3.7.6 1 .3.3.6.5 1 .6.3.1.8.3 1.7.3 1 .1 1.3.1 4 .1s3 0 4-.1c.9 0 1.4-.2 1.7-.3.4-.2.7-.3 1-.6.3-.3.5-.6.6-1 .1-.3.3-.8.3-1.7.1-1 .1-1.3.1-4s0-3-.1-4c0-.9-.2-1.4-.3-1.7-.2-.4-.3-.7-.6-1-.3-.3-.6-.5-1-.6-.3-.1-.8-.3-1.7-.3-1-.1-1.3-.1-4-.1Zm0 3.5a4.7 4.7 0 1 1 0 9.4 4.7 4.7 0 0 1 0-9.4Zm0 1.8a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Zm5-2a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0Z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.9c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.2Z"/></svg>
+          </a>
+        </div>
+        <a href="#" class="footer-store-badge">Download on the App Store</a>
+        <a href="#" class="footer-store-badge">Get it on Google Play</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Charcoal &amp; Clove Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
