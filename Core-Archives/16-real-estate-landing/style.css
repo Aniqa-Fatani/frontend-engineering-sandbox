@@ -1,0 +1,194 @@
+:root {
+    --primary-blue: #a3d2e9;
+    --primary-peach: #fce1c9;
+    --dark-color: #111111;
+    --gray-text: #666666;
+    --light-bg: #f9f9fb;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #444 !important;
+    transition: color 0.2s ease;
+}
+.nav-link:hover {
+    color: #000 !important;
+}
+.btn-custom-outline {
+    border: 1px solid #ddd;
+    padding: 6px 20px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    background: transparent;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(163, 210, 233, 0.25) 0%, rgba(252, 225, 201, 0.25) 100%);
+    border-radius: 24px;
+    padding: 60px 40px;
+    margin: 20px auto;
+}
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.hero-subtitle {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    max-width: 400px;
+}
+.search-box-group {
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 50px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+    max-width: 420px;
+}
+.search-box-group input {
+    border: none;
+    padding-left: 20px;
+    box-shadow: none;
+    font-size: 0.85rem;
+}
+.btn-dark-custom {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: none;
+}
+.btn-dark-custom:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Features / Steps Section */
+.feature-card {
+    padding: 20px;
+}
+.feature-icon {
+    font-size: 1.5rem;
+    color: #2b7a78;
+    margin-bottom: 15px;
+}
+.feature-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+.feature-desc {
+    font-size: 0.8rem;
+    color: var(--gray-text);
+    line-height: 1.5;
+}
+
+/* Projects Section */
+.project-card {
+    border: none;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0px 4px 25px rgba(0,0,0,0.04);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+.project-card img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 220px;
+    object-fit: cover;
+}
+.project-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+.project-desc {
+    font-size: 0.75rem;
+    color: var(--gray-text);
+}
+.rating-stars {
+    color: #f39c12;
+    font-size: 0.75rem;
+}
+
+/* Brokerage Section */
+.brokerage-section {
+    padding: 60px 0;
+}
+.brokerage-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+}
+
+/* Newsletter Section */
+.newsletter-banner {
+    background: linear-gradient(135deg, rgba(163, 210, 233, 0.4) 0%, rgba(252, 225, 201, 0.4) 100%);
+    border-radius: 20px;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.newsletter-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.newsletter-desc {
+    font-size: 0.8rem;
+    color: var(--gray-text);
+    max-width: 450px;
+}
+
+/* Fix Hero Section Image */
+.hero-section img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Fix Newsletter Section Image */
+.newsletter-banner img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Increase Newsletter House Size */
+.newsletter-banner img {
+    width: 100% !important;
+    max-width: 450px !important; /* Increased from 320px */
+    height: auto !important;
+    object-fit: contain;
+}
