@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Bakery - Home</title>
+  <style>
+    /* ==========================================
+       GLOBAL RESETS & VARIABLES
+       ========================================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    :root {
+      --pink-accent: #f87099;
+      --blue-accent: #65c2f5;
+      --light-blue-bg: #80cbf8;
+      --dark-text: #2c2c2c;
+      --light-gray-bg: #f9f9fb;
+      --footer-bg: #1e1e1e;
+    }
+
+    body {
+      color: var(--dark-text);
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Section Icon Placeholder */
+    .section-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 10px auto;
+      background-color: var(--pink-accent);
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-7 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm14 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-14 3h14v8H5v-8z'/%3E%3C/svg%3E") no-repeat center / contain;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-7 5a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm14 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-14 3h14v8H5v-8z'/%3E%3C/svg%3E") no-repeat center / contain;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* Buttons */
+    .btn-pink {
+      background-color: var(--pink-accent);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 25px;
+      display: inline-block;
+      font-weight: 600;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-blue {
+      background-color: var(--blue-accent);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 25px;
+      display: inline-block;
+      font-weight: 600;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-pink:hover { background-color: #e0557f; }
+    .btn-blue:hover { background-color: #4dafe6; }
+
+    /* ==========================================
+       HEADER & NAVIGATION
+       ========================================== */
+    header {
+      background: #ffffff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-color: var(--pink-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 5px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      font-weight: 500;
+      color: #555;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--pink-accent);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      width: 25px;
+      height: 25px;
+      background: #666;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+    }
+
+    /* ==========================================
+       HERO SECTION
+       ========================================== */
+    .hero {
+      position: relative;
+      height: 80vh;
+      min-height: 500px;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/hero-bg.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      color: white;
+      text-align: left;
+    }
+
+    .hero-content {
+      max-width: 650px;
+      padding-left: 10%;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      font-weight: 300;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 10px;
+      user-select: none;
+    }
+
+    .arrow-left { left: 20px; }
+    .arrow-right { right: 20px; }
+
+    /* ==========================================
+       OUR SPECIALTIES
+       ========================================== */
+    .specialties {
+      padding: 80px 0;
+      background-color: #ffffff;
+    }
+
+    .specialties-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .specialty-card {
+      text-align: center;
+    }
+
+    .specialty-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .specialty-card h3 {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* ==========================================
+       MAGIC PROCESSING (CTA BANNER)
+       ========================================== */
+    .magic-processing {
+      background-color: var(--light-blue-bg);
+      padding: 90px 0;
+      text-align: center;
+      color: white;
+    }
+
+    .magic-box {
+      border: 1px solid rgba(255,255,255,0.6);
+      padding: 50px 30px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .magic-box h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .magic-box p {
+      max-width: 600px;
+      margin: 0 auto 25px auto;
+      font-weight: 300;
+      font-size: 0.95rem;
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--light-blue-bg);
+    }
+
+    /* ==========================================
+       OUR CREATIONS
+       ========================================== */
+    .creations {
+      padding: 80px 0;
+      background-color: var(--light-gray-bg);
+    }
+
+    .creations-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .creations-grid img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* ==========================================
+       RECIPES FOR YOU
+       ========================================== */
+    .recipes {
+      padding: 80px 0;
+      background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('images/recipe-bg.jpg') center/cover no-repeat;
+      text-align: center;
+    }
+
+    .recipe-list {
+      list-style: none;
+      margin: 20px 0 40px 0;
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .recipe-author {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .recipe-author img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* ==========================================
+       CLIENTS SAY (TESTIMONIALS)
+       ========================================== */
+    .testimonials {
+      padding: 80px 0;
+      background: linear-gradient(rgba(248, 112, 153, 0.85), rgba(248, 112, 153, 0.85)), url('images/testimonials-bg.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      display: flex;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .testimonial-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonial-card p {
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+      opacity: 0.95;
+    }
+
+    .testimonial-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .testimonial-card span {
+      font-size: 0.75rem;
+      opacity: 0.8;
+    }
+
+    /* ==========================================
+       PRICING & QUESTIONS SECTION
+       ========================================== */
+    .pricing-section {
+      padding: 80px 0;
+      background-color: #ffffff;
+    }
+
+    .pricing-layout {
+      display: flex;
+      gap: 50px;
+    }
+
+    .pricing-table-container {
+      flex: 2;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .pricing-table th {
+      padding: 12px;
+      color: #888;
+      font-weight: 500;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .pricing-table td {
+      padding: 12px;
+      border-bottom: 1px solid #f2f2f2;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    .questions-box {
+      flex: 1;
+      background-color: #f8f9fa;
+      padding: 30px;
+      border-radius: 8px;
+      height: fit-content;
+    }
+
+    .questions-box h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .questions-box p {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .questions-box a {
+      color: var(--blue-accent);
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    /* ==========================================
+       NEWSLETTER SECTION
+       ========================================== */
+    .newsletter {
+      padding: 80px 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/newsletter-bg.jpg') center/cover no-repeat;
+      text-align: center;
+      color: white;
+    }
+
+    .newsletter h2 {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      max-width: 500px;
+      margin: 0 auto 30px auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+    }
+
+    /* ==========================================
+       FOOTER
+       ========================================== */
+    footer {
+      background-color: var(--footer-bg);
+      color: #888;
+      padding: 40px 0 20px 0;
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+      padding-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+    }
+
+    /* ==========================================
+       MEDIA QUERIES (RESPONSIVENESS)
+       ========================================== */
+    @media (max-width: 992px) {
+      .specialties-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .creations-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .pricing-layout {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+      .footer-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .specialties-grid, .creations-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">Sweet<br>Bakery</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <div class="social-icons">
+          <a href="#">g+</a>
+          <a href="#">t</a>
+          <a href="#">f</a>
+        </div>
+        <a href="#" class="btn-blue">Make an Order</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="arrow arrow-left">&#10094;</div>
+    <div class="hero-content">
+      <h1>Yummy Delicious Cakes</h1>
+      <p>We accept orders for birthdays, weddings and celebrations</p>
+      <a href="#" class="btn-blue">Order Sweets!</a>
+    </div>
+    <div class="arrow arrow-right">&#10095;</div>
+  </section>
+
+  <!-- OUR SPECIALTIES -->
+  <section class="specialties">
+    <div class="container">
+      <h2 class="section-title">Our Specialties</h2>
+      <div class="specialties-grid">
+        <div class="specialty-card">
+          <img src="images/creation-5.jpg" alt="Cupcakes">
+          <h3>Cupcakes</h3>
+        </div>
+        <div class="specialty-card">
+          <img src="images/macarons.jpg" alt="Macarons">
+          <h3>Macarons</h3>
+        </div>
+        <div class="specialty-card">
+          <img src="images/small-cakes.jpg" alt="Small Cakes">
+          <h3>Small Cakes</h3>
+        </div>
+        <div class="specialty-card">
+          <img src="images/croissants.jpg" alt="Croissants">
+          <h3>Croissants</h3>
+        </div>
+        <div class="specialty-card">
+          <img src="images/apple-pie.jpg" alt="Apple Pie">
+          <h3>Apple Pie</h3>
+        </div>
+        <div class="specialty-card">
+          <img src="images/cheesecake.jpg" alt="Cheesecake">
+          <h3>Cheesecake</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAGIC PROCESSING -->
+  <section class="magic-processing">
+    <div class="container">
+      <div class="magic-box">
+        <div class="section-icon" style="background-color: white;"></div>
+        <h2>Magic Processing</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce minus, nisi nostrum commodi dignissim omnis et quaerat corrupti cumque quasi.</p>
+        <a href="#" class="btn-outline">Discover More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR CREATIONS -->
+  <section class="creations">
+    <div class="container">
+      <div class="section-icon"></div>
+      <h2 class="section-title">Our Creations</h2>
+      <div class="creations-grid">
+        <img src="images/client-1.jpg" alt="Creation 1">
+        <img src="images/creation-2.jpg" alt="Creation 2">
+        <img src="images/creation-3.jpg" alt="Creation 3">
+        <img src="images/creation-4.jpg" alt="Creation 4">
+        <img src="images/creation-5.jpg" alt="Creation 5">
+        <img src="images/creation-6.jpg" alt="Creation 6">
+        <img src="images/creation-7.jpg" alt="Creation 7">
+        <img src="images/creation-8.jpg" alt="Creation 8">
+      </div>
+    </div>
+  </section>
+
+  <!-- RECIPES FOR YOU -->
+  <section class="recipes">
+    <div class="container">
+      <div class="section-icon"></div>
+      <h2 class="section-title">Recipes For You</h2>
+      <p style="font-weight: bold; color: #333;">Ingredients:</p>
+      <ul class="recipe-list">
+        <li>6 large Bramley apples, finely sliced</li>
+        <li>200g unsalted butter</li>
+        <li>140g raisins</li>
+        <li>100g soft brown sugar</li>
+        <li>4 eggs</li>
+        <li>200g self-raising flour</li>
+      </ul>
+      <div class="recipe-author">
+        <img src="images/eve-pudding.jpg" alt="Eve's Pudding">
+        <strong>Eve's Pudding</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS SAY -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <img src="images/face1.jpg" alt="Anna White">
+          <div>
+            <p>Quas magni ab officiis vero aperiam voluptate eaque deleniti, quae aliquam, est!</p>
+            <h4>Anna White</h4>
+            <span>Customer</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/face2.jpg" alt="Liza Green">
+          <div>
+            <p>Qui id autem reprehenderit porro, amet unde quis eligendi repudiandae! Quaerat, nesciunt.</p>
+            <h4>Liza Green</h4>
+            <span>Customer</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/face3.jpg" alt="Kate Gray">
+          <div>
+            <p>Assumenda numquam, minima sapiente enim tempore modi autem obcaecati voluptatum, natus sequi.</p>
+            <h4>Kate Gray</h4>
+            <span>Customer</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <img src="images/face4.jpg" alt="David Black">
+          <div>
+            <p>Numquam quisquam libero quam veritatis. Asperiores voluptate quos illo debitis aperiam?</p>
+            <h4>David Black</h4>
+            <span>Customer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING & QUESTIONS -->
+  <section class="pricing-section">
+    <div class="container">
+      <h2 class="section-title" style="text-align: left;">Our Special Cakes</h2>
+      <div class="pricing-layout">
+        <div class="pricing-table-container">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Goods</th>
+                <th>Price</th>
+                <th>Amount (g)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Almond Cookie</td><td>$36.18</td><td>100</td></tr>
+              <tr><td>Apple Pie</td><td>$20</td><td>2100</td></tr>
+              <tr><td>Baklava</td><td>$37.35</td><td>150</td></tr>
+              <tr><td>Banana Split</td><td>$3</td><td>130</td></tr>
+              <tr><td>Biscuit</td><td>$4</td><td>230</td></tr>
+              <tr><td>Blueberry Muffin</td><td>$6.75</td><td>90</td></tr>
+              <tr><td>Brownie</td><td>$30</td><td>2300</td></tr>
+              <tr><td>Butterscotch</td><td>$10</td><td>100</td></tr>
+              <tr><td>Chocolate Cake</td><td>$33</td><td>1900</td></tr>
+              <tr><td>Chocolate Spread</td><td>$17</td><td>100</td></tr>
+              <tr><td>Cinnamon Roll</td><td>$20</td><td>80</td></tr>
+              <tr><td>Cream Pie</td><td>$31</td><td>1500</td></tr>
+              <tr><td>Doughnut</td><td>$1.5</td><td>90</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="questions-box">
+          <h3>Have a Questions?</h3>
+          <p>Please call us and we will answer you.</p>
+          <p>Phone:</p>
+          <a href="tel:+71234567890">+7 (123) 456-78-90</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Get Our Sweet News</h2>
+      <form class="newsletter-form" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="Your email adress">
+        <button type="submit" class="btn-blue">Subscribe</button>
+      </form>
+      <p style="font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 15px;">FOLLOW US</p>
+      <div class="social-icons" style="justify-content: center;">
+        <a href="#">y</a>
+        <a href="#">p</a>
+        <a href="#">i</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="#">About us</a>
+          <a href="#">Vacancies</a>
+          <a href="#">Contacts</a>
+        </div>
+        <div class="logo">Sweet<br>Bakery</div>
+        <div>
+          <a href="#" class="btn-blue" style="font-size: 0.8rem; padding: 8px 18px;">Make an Order</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Copyright 2020 Mobirise - All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
