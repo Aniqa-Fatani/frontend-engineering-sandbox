@@ -1,0 +1,54 @@
+/* css/account.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.text-gold {
+    color: #B88E2F;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: url('../assets/images/bg-shop-banner.png') no-repeat center center/cover;
+    height: 316px;
+}
+
+.auth-btn {
+    transition: all 0.3s ease;
+    min-width: 170px;
+}
+
+.auth-btn:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.form-check-input:checked {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+/* Features Banner Section */
+.features-banner {
+    background-color: #FAF4EF;
+}
+
+/* Footer Styling */
+.newsletter-box input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 240px;
+    }
+}

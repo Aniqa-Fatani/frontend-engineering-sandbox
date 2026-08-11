@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Contact</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar navbar-expand-lg sticky-top bg-white py-3 border-bottom">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Furniro Logo" height="32">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#furniroNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="furniroNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium active text-decoration-underline" href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-4 fs-5 text-dark">
+                    <a href="account.html" class="text-dark"><i class="fa-regular fa-user"></i></a>
+                    <a href="shop.html" class="text-dark"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="wishlist.html" class="text-dark"><i class="fa-regular fa-heart"></i></a>
+                    <a href="cart.html" class="text-dark"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner d-flex align-items-center justify-content-center text-center">
+        <div class="hero-content">
+            <img src="assets/images/furniro-logo.png" alt="Furniro Emblem" class="banner-logo mb-2" width="50">
+            <h1 class="fw-medium display-5">Contact</h1>
+            <p class="mb-0 fs-6 fw-medium">
+                <a href="index.html" class="text-dark text-decoration-none">Home</a> 
+                <i class="fa-solid fa-chevron-right mx-2 fs-7"></i> 
+                <span class="text-secondary fw-light">Contact</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Main Content Section -->
+    <section class="contact-container py-5">
+        <div class="container">
+            <div class="contact-header text-center mx-auto mb-5" style="max-width: 644px;">
+                <h2 class="fw-semibold text-dark">Get In Touch With Us</h2>
+                <p class="text-secondary">For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
+            </div>
+
+            <div class="row g-4 justify-content-between">
+                <!-- Contact Info Left Column -->
+                <div class="col-12 col-lg-4 pe-lg-4">
+                    <div class="contact-info d-flex flex-column gap-4">
+                        <div class="info-item d-flex gap-3 align-items-start">
+                            <i class="fa-solid fa-location-dot fs-4 mt-1 text-dark"></i>
+                            <div>
+                                <h3 class="fs-5 fw-medium mb-1">Address</h3>
+                                <p class="mb-0 text-dark">236 5th SE Avenue, New York NY10000, United States</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item d-flex gap-3 align-items-start">
+                            <i class="fa-solid fa-phone fs-4 mt-1 text-dark"></i>
+                            <div>
+                                <h3 class="fs-5 fw-medium mb-1">Phone</h3>
+                                <p class="mb-0 text-dark">Mobile: +(84) 546-6789<br>Hotline: +(84) 456-6789</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item d-flex gap-3 align-items-start">
+                            <i class="fa-solid fa-clock fs-4 mt-1 text-dark"></i>
+                            <div>
+                                <h3 class="fs-5 fw-medium mb-1">Working Time</h3>
+                                <p class="mb-0 text-dark">Monday-Friday: 9:00 - 22:00<br>Saturday-Sunday: 9:00 - 21:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Right Column -->
+                <div class="col-12 col-lg-7">
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form d-flex flex-column gap-4">
+                            <div class="form-group">
+                                <label for="name" class="form-label fw-medium text-dark">Your name</label>
+                                <input type="text" id="name" class="form-control form-control-lg border-secondary-subtle rounded-3" placeholder="Abc" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label fw-medium text-dark">Email address</label>
+                                <input type="email" id="email" class="form-control form-control-lg border-secondary-subtle rounded-3" placeholder="Abc@def.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label fw-medium text-dark">Subject</label>
+                                <input type="text" id="subject" class="form-control form-control-lg border-secondary-subtle rounded-3" placeholder="This is optional">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label fw-medium text-dark">Message</label>
+                                <textarea id="message" rows="4" class="form-control form-control-lg border-secondary-subtle rounded-3" placeholder="Hi! I'd like to ask about..." required></textarea>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="submit-btn btn text-white py-3 px-5 border-0">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Banner Section -->
+    <section class="features-banner py-5 px-3">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-trophy fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">High Quality</h4>
+                            <p class="mb-0 text-secondary">crafted from top materials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-regular fa-circle-check fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">Warranty Protection</h4>
+                            <p class="mb-0 text-secondary">Over 2 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-box-open fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">Free Shipping</h4>
+                            <p class="mb-0 text-secondary">Order over 150 $</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-headset fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">24 / 7 Support</h4>
+                            <p class="mb-0 text-secondary">Dedicated support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer border-top pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-12 col-md-4">
+                    <div class="footer-brand">
+                        <h2 class="fw-bold fs-4 mb-4">Funiro.</h2>
+                        <p class="text-secondary">400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Links</span>
+                        <a href="index.html" class="text-dark text-decoration-none fw-medium">Home</a>
+                        <a href="shop.html" class="text-dark text-decoration-none fw-medium">Shop</a>
+                        <a href="about.html" class="text-dark text-decoration-none fw-medium">About</a>
+                        <a href="contact.html" class="text-dark text-decoration-none fw-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Help</span>
+                        <a href="checkout.html" class="text-dark text-decoration-none fw-medium">Payment Options</a>
+                        <a href="cart.html" class="text-dark text-decoration-none fw-medium">Returns</a>
+                        <a href="contact.html" class="text-dark text-decoration-none fw-medium">Privacy Policies</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Newsletter</span>
+                        <form class="newsletter-box d-flex gap-2 border-bottom border-dark pb-1">
+                            <input type="email" class="form-control border-0 p-0 shadow-none bg-transparent" placeholder="Enter Your Email Address" required>
+                            <button type="submit" class="btn p-0 border-0 fw-medium text-dark text-nowrap">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom border-top pt-4">
+                <p class="mb-0 text-dark">2023 furino. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

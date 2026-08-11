@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Wishlist</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="css/wishlist.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar navbar-expand-lg sticky-top bg-white py-3 border-bottom">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Furniro Logo" height="32">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#furniroNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="furniroNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-4 fs-5 text-dark">
+                    <a href="account.html" class="text-dark"><i class="fa-regular fa-user"></i></a>
+                    <a href="shop.html" class="text-dark"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="wishlist.html" class="text-gold"><i class="fa-solid fa-heart"></i></a>
+                    <a href="cart.html" class="text-dark"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner d-flex align-items-center justify-content-center text-center">
+        <div class="hero-content">
+            <img src="assets/images/furniro-logo.png" alt="Furniro Emblem" class="banner-logo mb-2" width="50">
+            <h1 class="fw-medium display-5">Wishlist</h1>
+            <p class="mb-0 fs-6 fw-medium">
+                <a href="index.html" class="text-dark text-decoration-none">Home</a> 
+                <i class="fa-solid fa-chevron-right mx-2 fs-7"></i> 
+                <span class="text-secondary fw-light">Wishlist</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Wishlist Table Section -->
+    <section class="wishlist-section py-5">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table align-middle text-center border-0">
+                    <thead class="bg-light-sand">
+                        <tr class="py-3">
+                            <th scope="col" class="py-3 border-0">Product</th>
+                            <th scope="col" class="py-3 border-0">Price</th>
+                            <th scope="col" class="py-3 border-0">Stock Status</th>
+                            <th scope="col" class="py-3 border-0">Action</th>
+                            <th scope="col" class="py-3 border-0">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody class="border-top-0">
+                        <!-- Item 1 -->
+                        <tr class="border-bottom">
+                            <td class="py-4 text-start">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="assets/images/recent-1.png" alt="Asgaard Sofa" class="rounded-3 object-fit-cover" width="80" height="80">
+                                    <span class="fw-medium text-dark fs-6">Asgaard Sofa</span>
+                                </div>
+                            </td>
+                            <td class="py-4 text-secondary">Rs. 250,000.00</td>
+                            <td class="py-4"><span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill">In Stock</span></td>
+                            <td class="py-4">
+                                <a href="cart.html" class="btn btn-outline-dark rounded-3 px-4 py-2 small">Add to Cart</a>
+                            </td>
+                            <td class="py-4">
+                                <button class="btn border-0 text-gold fs-5 p-0"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Item 2 -->
+                        <tr class="border-bottom">
+                            <td class="py-4 text-start">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="assets/images/recent-2.png" alt="Syltherine Chair" class="rounded-3 object-fit-cover" width="80" height="80">
+                                    <span class="fw-medium text-dark fs-6">Syltherine Chair</span>
+                                </div>
+                            </td>
+                            <td class="py-4 text-secondary">Rs. 2,500,000.00</td>
+                            <td class="py-4"><span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill">In Stock</span></td>
+                            <td class="py-4">
+                                <a href="cart.html" class="btn btn-outline-dark rounded-3 px-4 py-2 small">Add to Cart</a>
+                            </td>
+                            <td class="py-4">
+                                <button class="btn border-0 text-gold fs-5 p-0"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <!-- Item 3 -->
+                        <tr class="border-bottom">
+                            <td class="py-4 text-start">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="assets/images/recent-3.png" alt="Respira Lamp" class="rounded-3 object-fit-cover" width="80" height="80">
+                                    <span class="fw-medium text-dark fs-6">Respira Lamp</span>
+                                </div>
+                            </td>
+                            <td class="py-4 text-secondary">Rs. 500,000.00</td>
+                            <td class="py-4"><span class="badge bg-danger-subtle text-danger px-3 py-2 rounded-pill">Out of Stock</span></td>
+                            <td class="py-4">
+                                <button class="btn btn-secondary rounded-3 px-4 py-2 small disabled" disabled>Add to Cart</button>
+                            </td>
+                            <td class="py-4">
+                                <button class="btn border-0 text-gold fs-5 p-0"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap gap-3">
+                <a href="shop.html" class="btn btn-outline-dark px-4 py-3 rounded-3"><i class="fa-solid fa-arrow-left me-2"></i> Continue Shopping</a>
+                <a href="cart.html" class="btn bg-gold text-white px-4 py-3 rounded-3 fw-medium">Add All to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Banner Section -->
+    <section class="features-banner py-5 px-3">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-trophy fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">High Quality</h4>
+                            <p class="mb-0 text-secondary">crafted from top materials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-regular fa-circle-check fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">Warranty Protection</h4>
+                            <p class="mb-0 text-secondary">Over 2 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-box-open fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">Free Shipping</h4>
+                            <p class="mb-0 text-secondary">Order over 150 $</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-headset fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">24 / 7 Support</h4>
+                            <p class="mb-0 text-secondary">Dedicated support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer border-top pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-12 col-md-4">
+                    <div class="footer-brand">
+                        <h2 class="fw-bold fs-4 mb-4">Funiro.</h2>
+                        <p class="text-secondary">400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Links</span>
+                        <a href="index.html" class="text-dark text-decoration-none fw-medium">Home</a>
+                        <a href="shop.html" class="text-dark text-decoration-none fw-medium">Shop</a>
+                        <a href="about.html" class="text-dark text-decoration-none fw-medium">About</a>
+                        <a href="contact.html" class="text-dark text-decoration-none fw-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Help</span>
+                        <a href="checkout.html" class="text-dark text-decoration-none fw-medium">Payment Options</a>
+                        <a href="cart.html" class="text-dark text-decoration-none fw-medium">Returns</a>
+                        <a href="contact.html" class="text-dark text-decoration-none fw-medium">Privacy Policies</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Newsletter</span>
+                        <form class="newsletter-box d-flex gap-2 border-bottom border-dark pb-1">
+                            <input type="email" class="form-control border-0 p-0 shadow-none bg-transparent" placeholder="Enter Your Email Address" required>
+                            <button type="submit" class="btn p-0 border-0 fw-medium text-dark text-nowrap">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom border-top pt-4">
+                <p class="mb-0 text-dark">2023 furino. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

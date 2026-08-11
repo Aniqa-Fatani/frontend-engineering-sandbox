@@ -1,0 +1,86 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: url('../assets/images/bg-shop-banner.png') no-repeat center center/cover;
+    height: 316px;
+}
+
+/* Read More Link */
+.read-more {
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #B88E2F !important;
+    border-color: #B88E2F !important;
+}
+
+/* Pagination Buttons */
+.page-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #F9F1E7;
+    color: #000000;
+    font-size: 20px;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-btn.active, 
+.page-btn:hover {
+    background-color: #B88E2F;
+    color: #FFFFFF;
+}
+
+.page-btn.next-btn {
+    width: 98px;
+}
+
+/* Sidebar Search Box */
+.search-box input {
+    height: 58px;
+}
+
+/* Features Banner Section */
+.features-banner {
+    background-color: #FAF4EF;
+}
+
+/* Footer Styling */
+.newsletter-box input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Media Queries for Mobile/Tablet Devices */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 240px;
+    }
+
+    .pagination-wrapper {
+        justify-content: center !important;
+    }
+
+    .page-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .page-btn.next-btn {
+        width: 80px;
+    }
+}

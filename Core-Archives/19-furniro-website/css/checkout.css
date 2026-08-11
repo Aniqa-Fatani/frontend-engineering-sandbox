@@ -1,0 +1,92 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: url('../assets/images/bg-shop-banner.png') no-repeat center center/cover;
+    height: 316px;
+}
+
+/* Form Controls & Inputs */
+.checkout-form input, 
+.checkout-form select {
+    height: 60px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+
+.checkout-form input::placeholder {
+    color: #9F9F9F;
+}
+
+/* Order Summary Box */
+.total-price {
+    color: #B88E2F;
+}
+
+/* Payment Methods & Radio Styling */
+.payment-option .form-check-input:checked {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.payment-description {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.privacy-notice {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.place-order-btn {
+    min-width: 250px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.place-order-btn:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* Features Banner Section */
+.features-banner {
+    background-color: #FAF4EF;
+}
+
+/* Footer Styling */
+.newsletter-box input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Media Query Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 240px;
+    }
+
+    .checkout-form input, 
+    .checkout-form select {
+        height: 52px;
+        font-size: 14px;
+    }
+
+    .place-order-btn {
+        width: 100% !important;
+    }
+}

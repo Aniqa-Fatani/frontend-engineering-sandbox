@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Blog</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar navbar-expand-lg sticky-top bg-white py-3 border-bottom">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Furniro Logo" height="32">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#furniroNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="furniroNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-4 fs-5 text-dark">
+                    <a href="account.html" class="text-dark"><i class="fa-regular fa-user"></i></a>
+                    <a href="shop.html" class="text-dark"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="wishlist.html" class="text-dark"><i class="fa-regular fa-heart"></i></a>
+                    <a href="cart.html" class="text-dark"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner d-flex align-items-center justify-content-center text-center">
+        <div class="hero-content">
+            <img src="assets/images/furniro-logo.png" alt="Furniro Emblem" class="banner-logo mb-2" width="50">
+            <h1 class="fw-medium display-5">Blog</h1>
+            <p class="mb-0 fs-6 fw-medium">
+                <a href="index.html" class="text-dark text-decoration-none">Home</a> 
+                <i class="fa-solid fa-chevron-right mx-2 fs-7"></i> 
+                <span class="text-secondary fw-light">Blog</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Layout Container -->
+    <section class="blog-container py-5">
+        <div class="container">
+            <div class="row g-5">
+                
+                <!-- Main Blog Posts List (Left Column) -->
+                <div class="col-12 col-lg-8">
+                    <div class="d-flex flex-column gap-5">
+                        
+                        <!-- Article 1 -->
+                        <article class="blog-card">
+                            <img src="assets/images/blog-1.png" alt="Going all-in with millennial design" class="img-fluid rounded-3 mb-3 w-100">
+                            <div class="blog-meta d-flex flex-wrap gap-3 text-secondary mb-3 fs-6">
+                                <span><i class="fa-solid fa-user me-1"></i> Admin</span>
+                                <span><i class="fa-solid fa-calendar me-1"></i> 14 Oct 2022</span>
+                                <span><i class="fa-solid fa-tag me-1"></i> Wood</span>
+                            </div>
+                            <h2 class="fs-2 fw-medium text-dark mb-3">Going all-in with millennial design</h2>
+                            <p class="text-secondary lh-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.</p>
+                            <a href="#" class="read-more text-dark fw-medium text-decoration-none border-bottom border-dark pb-2">Read more</a>
+                        </article>
+
+                        <!-- Article 2 -->
+                        <article class="blog-card">
+                            <img src="assets/images/blog-2.png" alt="Exploring new ways of decorating" class="img-fluid rounded-3 mb-3 w-100">
+                            <div class="blog-meta d-flex flex-wrap gap-3 text-secondary mb-3 fs-6">
+                                <span><i class="fa-solid fa-user me-1"></i> Admin</span>
+                                <span><i class="fa-solid fa-calendar me-1"></i> 14 Oct 2022</span>
+                                <span><i class="fa-solid fa-tag me-1"></i> Handmade</span>
+                            </div>
+                            <h2 class="fs-2 fw-medium text-dark mb-3">Exploring new ways of decorating</h2>
+                            <p class="text-secondary lh-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.</p>
+                            <a href="#" class="read-more text-dark fw-medium text-decoration-none border-bottom border-dark pb-2">Read more</a>
+                        </article>
+
+                        <!-- Article 3 -->
+                        <article class="blog-card">
+                            <img src="assets/images/blog-3.png" alt="Handmade pieces that took time to make" class="img-fluid rounded-3 mb-3 w-100">
+                            <div class="blog-meta d-flex flex-wrap gap-3 text-secondary mb-3 fs-6">
+                                <span><i class="fa-solid fa-user me-1"></i> Admin</span>
+                                <span><i class="fa-solid fa-calendar me-1"></i> 14 Oct 2022</span>
+                                <span><i class="fa-solid fa-tag me-1"></i> Wood</span>
+                            </div>
+                            <h2 class="fs-2 fw-medium text-dark mb-3">Handmade pieces that took time to make</h2>
+                            <p class="text-secondary lh-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in.</p>
+                            <a href="#" class="read-more text-dark fw-medium text-decoration-none border-bottom border-dark pb-2">Read more</a>
+                        </article>
+
+                        <!-- Pagination -->
+                        <div class="pagination-wrapper d-flex justify-content-end gap-3 mt-4">
+                            <button class="btn page-btn active rounded-3">1</button>
+                            <button class="btn page-btn rounded-3">2</button>
+                            <button class="btn page-btn rounded-3">3</button>
+                            <button class="btn page-btn next-btn rounded-3">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Section (Right Column) -->
+                <aside class="col-12 col-lg-4">
+                    <div class="blog-sidebar d-flex flex-column gap-5">
+                        
+                        <!-- Search Box -->
+                        <div class="search-box position-relative">
+                            <input type="text" class="form-control form-control-lg border-secondary-subtle rounded-3 pe-5" placeholder="Search...">
+                            <i class="fa-solid fa-magnifying-glass position-absolute top-50 end-0 translate-middle-y me-3 fs-5"></i>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="widget categories-widget">
+                            <h3 class="fs-4 fw-medium text-dark mb-4">Categories</h3>
+                            <ul class="list-unstyled d-flex flex-column gap-3 text-secondary">
+                                <li class="d-flex justify-content-between fs-6"><span>Crafts</span> <span>2</span></li>
+                                <li class="d-flex justify-content-between fs-6"><span>Design</span> <span>8</span></li>
+                                <li class="d-flex justify-content-between fs-6"><span>Handmade</span> <span>7</span></li>
+                                <li class="d-flex justify-content-between fs-6"><span>Interior</span> <span>1</span></li>
+                                <li class="d-flex justify-content-between fs-6"><span>Wood</span> <span>6</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Recent Posts Widget -->
+                        <div class="widget recent-posts-widget">
+                            <h3 class="fs-4 fw-medium text-dark mb-4">Recent Posts</h3>
+                            <div class="recent-list d-flex flex-column gap-4">
+                                <div class="recent-item d-flex align-items-center gap-3">
+                                    <img src="assets/images/recent-1.png" alt="Recent Post 1" class="rounded-3 object-fit-cover" width="80" height="80">
+                                    <div>
+                                        <h4 class="fs-6 fw-medium text-dark mb-1 lh-sm">Going all-in with millennial design</h4>
+                                        <span class="text-secondary small">03 Aug 2022</span>
+                                    </div>
+                                </div>
+                                <div class="recent-item d-flex align-items-center gap-3">
+                                    <img src="assets/images/recent-2.png" alt="Recent Post 2" class="rounded-3 object-fit-cover" width="80" height="80">
+                                    <div>
+                                        <h4 class="fs-6 fw-medium text-dark mb-1 lh-sm">Exploring new ways of decorating</h4>
+                                        <span class="text-secondary small">03 Aug 2022</span>
+                                    </div>
+                                </div>
+                                <div class="recent-item d-flex align-items-center gap-3">
+                                    <img src="assets/images/recent-3.png" alt="Recent Post 3" class="rounded-3 object-fit-cover" width="80" height="80">
+                                    <div>
+                                        <h4 class="fs-6 fw-medium text-dark mb-1 lh-sm">Handmade pieces that took time to make</h4>
+                                        <span class="text-secondary small">03 Aug 2022</span>
+                                    </div>
+                                </div>
+                                <div class="recent-item d-flex align-items-center gap-3">
+                                    <img src="assets/images/recent-4.png" alt="Recent Post 4" class="rounded-3 object-fit-cover" width="80" height="80">
+                                    <div>
+                                        <h4 class="fs-6 fw-medium text-dark mb-1 lh-sm">Modern home in Milan</h4>
+                                        <span class="text-secondary small">03 Aug 2022</span>
+                                    </div>
+                                </div>
+                                <div class="recent-item d-flex align-items-center gap-3">
+                                    <img src="assets/images/recent-5.png" alt="Recent Post 5" class="rounded-3 object-fit-cover" width="80" height="80">
+                                    <div>
+                                        <h4 class="fs-6 fw-medium text-dark mb-1 lh-sm">Colorful office redesign</h4>
+                                        <span class="text-secondary small">03 Aug 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Banner Section -->
+    <section class="features-banner py-5 px-3">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-trophy fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">High Quality</h4>
+                            <p class="mb-0 text-secondary">crafted from top materials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-regular fa-circle-check fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">Warranty Protection</h4>
+                            <p class="mb-0 text-secondary">Over 2 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-box-open fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">Free Shipping</h4>
+                            <p class="mb-0 text-secondary">Order over 150 $</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-headset fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">24 / 7 Support</h4>
+                            <p class="mb-0 text-secondary">Dedicated support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer border-top pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-12 col-md-4">
+                    <div class="footer-brand">
+                        <h2 class="fw-bold fs-4 mb-4">Funiro.</h2>
+                        <p class="text-secondary">400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Links</span>
+                        <a href="index.html" class="text-dark text-decoration-none fw-medium">Home</a>
+                        <a href="shop.html" class="text-dark text-decoration-none fw-medium">Shop</a>
+                        <a href="about.html" class="text-dark text-decoration-none fw-medium">About</a>
+                        <a href="contact.html" class="text-dark text-decoration-none fw-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Help</span>
+                        <a href="checkout.html" class="text-dark text-decoration-none fw-medium">Payment Options</a>
+                        <a href="cart.html" class="text-dark text-decoration-none fw-medium">Returns</a>
+                        <a href="contact.html" class="text-dark text-decoration-none fw-medium">Privacy Policies</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Newsletter</span>
+                        <form class="newsletter-box d-flex gap-2 border-bottom border-dark pb-1">
+                            <input type="email" class="form-control border-0 p-0 shadow-none bg-transparent" placeholder="Enter Your Email Address" required>
+                            <button type="submit" class="btn p-0 border-0 fw-medium text-dark text-nowrap">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom border-top pt-4">
+                <p class="mb-0 text-dark">2023 furino. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

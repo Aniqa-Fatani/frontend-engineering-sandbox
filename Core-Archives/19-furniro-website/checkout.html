@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Checkout</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar navbar-expand-lg sticky-top bg-white py-3 border-bottom">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Furniro Logo" height="32">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#furniroNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="furniroNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="contact.html">Contact</a></li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-4 fs-5 text-dark">
+                    <a href="account.html" class="text-dark"><i class="fa-regular fa-user"></i></a>
+                    <a href="shop.html" class="text-dark"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="wishlist.html" class="text-dark"><i class="fa-regular fa-heart"></i></a>
+                    <a href="cart.html" class="text-dark"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner d-flex align-items-center justify-content-center text-center">
+        <div class="hero-content">
+            <img src="assets/images/furniro-logo.png" alt="Furniro Emblem" class="banner-logo mb-2" width="50">
+            <h1 class="fw-medium display-5">Checkout</h1>
+            <p class="mb-0 fs-6 fw-medium">
+                <a href="index.html" class="text-dark text-decoration-none">Home</a> 
+                <i class="fa-solid fa-chevron-right mx-2 fs-7"></i> 
+                <a href="cart.html" class="text-dark text-decoration-none">Cart</a>
+                <i class="fa-solid fa-chevron-right mx-2 fs-7"></i> 
+                <span class="text-secondary fw-light">Checkout</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Checkout Main Content -->
+    <section class="checkout-container py-5">
+        <div class="container">
+            <div class="row g-5 justify-content-between">
+                <!-- Billing Details Form Left -->
+                <div class="col-12 col-lg-7 col-xl-6">
+                    <div class="billing-details">
+                        <h2 class="fw-semibold text-dark fs-2 mb-4">Billing details</h2>
+                        <form class="checkout-form d-flex flex-column gap-4">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <label for="first-name" class="form-label fw-medium text-dark">First Name</label>
+                                    <input type="text" id="first-name" class="form-control form-control-lg border-secondary-subtle rounded-3" required>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="last-name" class="form-label fw-medium text-dark">Last Name</label>
+                                    <input type="text" id="last-name" class="form-control form-control-lg border-secondary-subtle rounded-3" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="company" class="form-label fw-medium text-dark">Company Name (Optional)</label>
+                                <input type="text" id="company" class="form-control form-control-lg border-secondary-subtle rounded-3">
+                            </div>
+
+                            <div>
+                                <label for="country" class="form-label fw-medium text-dark">Country / Region</label>
+                                <select id="country" class="form-select form-select-lg border-secondary-subtle rounded-3 text-secondary">
+                                    <option value="sri-lanka" selected>Sri Lanka</option>
+                                    <option value="pakistan">Pakistan</option>
+                                    <option value="india">India</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="street" class="form-label fw-medium text-dark">Street address</label>
+                                <input type="text" id="street" class="form-control form-control-lg border-secondary-subtle rounded-3" placeholder="House number and street name" required>
+                            </div>
+
+                            <div>
+                                <label for="city" class="form-label fw-medium text-dark">Town / City</label>
+                                <input type="text" id="city" class="form-control form-control-lg border-secondary-subtle rounded-3" required>
+                            </div>
+
+                            <div>
+                                <label for="province" class="form-label fw-medium text-dark">Province</label>
+                                <select id="province" class="form-select form-select-lg border-secondary-subtle rounded-3 text-secondary">
+                                    <option value="western" selected>Western Province</option>
+                                    <option value="central">Central Province</option>
+                                    <option value="southern">Southern Province</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="zip" class="form-label fw-medium text-dark">ZIP code</label>
+                                <input type="text" id="zip" class="form-control form-control-lg border-secondary-subtle rounded-3" required>
+                            </div>
+
+                            <div>
+                                <label for="phone" class="form-label fw-medium text-dark">Phone</label>
+                                <input type="tel" id="phone" class="form-control form-control-lg border-secondary-subtle rounded-3" required>
+                            </div>
+
+                            <div>
+                                <label for="email" class="form-label fw-medium text-dark">Email address</label>
+                                <input type="email" id="email" class="form-control form-control-lg border-secondary-subtle rounded-3" required>
+                            </div>
+
+                            <div>
+                                <input type="text" id="additional" class="form-control form-control-lg border-secondary-subtle rounded-3" placeholder="Additional information">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Order Summary & Payment Right -->
+                <div class="col-12 col-lg-5">
+                    <div class="order-summary-box p-3 p-sm-4">
+                        <div class="order-header d-flex justify-content-between pb-3">
+                            <h3 class="fs-4 fw-medium text-dark mb-0">Product</h3>
+                            <h3 class="fs-4 fw-medium text-dark mb-0">Subtotal</h3>
+                        </div>
+                        
+                        <div class="order-item d-flex justify-content-between py-2">
+                            <span class="product-name text-secondary fs-6">Asgaard sofa <strong class="text-dark fs-7 ms-1">X 1</strong></span>
+                            <span class="product-price fw-light text-dark">Rs. 250,000.00</span>
+                        </div>
+
+                        <div class="order-subtotal d-flex justify-content-between py-2">
+                            <span class="text-dark fw-normal">Subtotal</span>
+                            <span class="fw-light text-dark">Rs. 250,000.00</span>
+                        </div>
+
+                        <div class="order-total d-flex justify-content-between align-items-center py-2 mb-3">
+                            <span class="text-dark fw-normal">Total</span>
+                            <span class="total-price fw-bold fs-4">Rs. 250,000.00</span>
+                        </div>
+
+                        <hr class="my-4 text-secondary-subtle">
+
+                        <!-- Payment Methods -->
+                        <div class="payment-methods d-flex flex-column gap-3 mb-4">
+                            <div class="form-check payment-option">
+                                <input class="form-check-input shadow-none" type="radio" id="bank-transfer" name="payment" checked>
+                                <label class="form-check-label text-dark fw-medium" for="bank-transfer">Direct Bank Transfer</label>
+                                <p class="payment-description text-secondary fw-light small mt-2 mb-0">
+                                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                                </p>
+                            </div>
+
+                            <div class="form-check payment-option">
+                                <input class="form-check-input shadow-none" type="radio" id="direct-bank-2" name="payment">
+                                <label class="form-check-label text-secondary" for="direct-bank-2">Direct Bank Transfer</label>
+                            </div>
+
+                            <div class="form-check payment-option">
+                                <input class="form-check-input shadow-none" type="radio" id="cod" name="payment">
+                                <label class="form-check-label text-secondary" for="cod">Cash On Delivery</label>
+                            </div>
+                        </div>
+
+                        <p class="privacy-notice text-dark fw-light small mb-4">
+                            Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="contact.html" class="text-dark fw-semibold text-decoration-none">privacy policy</a>.
+                        </p>
+
+                        <div class="text-center">
+                            <button type="submit" class="place-order-btn btn border-dark btn-lg py-3 px-5 rounded-4 w-100 w-sm-auto">Place order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Banner Section -->
+    <section class="features-banner py-5 px-3">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-trophy fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">High Quality</h4>
+                            <p class="mb-0 text-secondary">crafted from top materials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-regular fa-circle-check fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">Warranty Protection</h4>
+                            <p class="mb-0 text-secondary">Over 2 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-box-open fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">Free Shipping</h4>
+                            <p class="mb-0 text-secondary">Order over 150 $</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="feature-item d-flex align-items-center gap-3">
+                        <i class="fa-solid fa-headset fs-1 text-dark"></i>
+                        <div>
+                            <h4 class="fs-5 fw-semibold mb-0 text-dark">24 / 7 Support</h4>
+                            <p class="mb-0 text-secondary">Dedicated support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer border-top pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-12 col-md-4">
+                    <div class="footer-brand">
+                        <h2 class="fw-bold fs-4 mb-4">Funiro.</h2>
+                        <p class="text-secondary">400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Links</span>
+                        <a href="index.html" class="text-dark text-decoration-none fw-medium">Home</a>
+                        <a href="shop.html" class="text-dark text-decoration-none fw-medium">Shop</a>
+                        <a href="about.html" class="text-dark text-decoration-none fw-medium">About</a>
+                        <a href="contact.html" class="text-dark text-decoration-none fw-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Help</span>
+                        <a href="checkout.html" class="text-dark text-decoration-none fw-medium">Payment Options</a>
+                        <a href="cart.html" class="text-dark text-decoration-none fw-medium">Returns</a>
+                        <a href="contact.html" class="text-dark text-decoration-none fw-medium">Privacy Policies</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="footer-col d-flex flex-column gap-3">
+                        <span class="text-secondary fw-medium">Newsletter</span>
+                        <form class="newsletter-box d-flex gap-2 border-bottom border-dark pb-1">
+                            <input type="email" class="form-control border-0 p-0 shadow-none bg-transparent" placeholder="Enter Your Email Address" required>
+                            <button type="submit" class="btn p-0 border-0 fw-medium text-dark text-nowrap">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom border-top pt-4">
+                <p class="mb-0 text-dark">2023 furino. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

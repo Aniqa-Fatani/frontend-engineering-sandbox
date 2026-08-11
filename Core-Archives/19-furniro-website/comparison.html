@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Product Comparison</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="css/comparison.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Furniro Logo" height="32">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-menu nav me-auto ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons d-flex align-items-center gap-4">
+                    <a href="#"><i class="fa-regular fa-user"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <img src="assets/images/furniro-logo.png" alt="Furniro Emblem" class="banner-logo">
+            <h1>Product Comparison</h1>
+            <p><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right mx-2"></i> <span>Comparison</span></p>
+        </div>
+    </section>
+
+    <!-- Comparison Main Container -->
+    <section class="comparison-container container">
+        
+        <!-- Header Row (Intro + Selected Products + Selector Dropdown) -->
+        <div class="row g-4 align-items-start mb-5">
+            <div class="col-lg-3 col-md-6 intro-col">
+                <h3>Go to Product page for more Products</h3>
+                <a href="shop.html" class="view-more-link">View More</a>
+            </div>
+
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-6 product-col">
+                <div class="product-img-box">
+                    <img src="assets/images/asgaard-sofa-main.png" alt="Asgaard Sofa">
+                </div>
+                <h4>Asgaard Sofa</h4>
+                <p class="price">Rs. 250,000.00</p>
+                <div class="rating">
+                    <span>4.7</span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span class="review-count">| 204 Review</span>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-6 product-col">
+                <div class="product-img-box">
+                    <img src="assets/images/asgaard-thumb-1.png" alt="Outdoor Sofa Set">
+                </div>
+                <h4>Outdoor Sofa Set</h4>
+                <p class="price">Rs. 224,000.00</p>
+                <div class="rating">
+                    <span>4.2</span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="review-count">| 145 Review</span>
+                </div>
+            </div>
+
+            <!-- Dropdown Column -->
+            <div class="col-lg-3 col-md-6 add-product-col">
+                <h3 class="mb-3">Add A Product</h3>
+                <select class="form-select select-product-btn">
+                    <option value="">Choose a Product</option>
+                    <option value="asgaard">Asgaard Sofa</option>
+                    <option value="outdoor">Outdoor Sofa Set</option>
+                </select>
+            </div>
+        </div>
+
+        <hr class="mb-4" style="color: #E8E8E8;">
+
+        <!-- Specifications Grid Table -->
+        <div class="spec-table-container">
+
+            <!-- General Section -->
+            <div class="spec-section-title">General</div>
+            
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Sales Package</div>
+                <div class="col-4 spec-val">1 sectional sofa</div>
+                <div class="col-5 spec-val">1 Three Seater, 2 Single Seater</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Model Number</div>
+                <div class="col-4 spec-val">TFCBLIGRBL6SRHS</div>
+                <div class="col-5 spec-val">DTUBLIGRBL568</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Secondary Material</div>
+                <div class="col-4 spec-val">Solid Wood</div>
+                <div class="col-5 spec-val">Solid Wood</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Configuration</div>
+                <div class="col-4 spec-val">L-shaped</div>
+                <div class="col-5 spec-val">L-shaped</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Upholstery Material</div>
+                <div class="col-4 spec-val">Fabric + Cotton</div>
+                <div class="col-5 spec-val">Fabric + Cotton</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Upholstery Color</div>
+                <div class="col-4 spec-val">Bright Grey & Lion</div>
+                <div class="col-5 spec-val">Bright Grey & Lion</div>
+            </div>
+
+            <!-- Product Section -->
+            <div class="spec-section-title">Product</div>
+
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Filling Material</div>
+                <div class="col-4 spec-val">Foam</div>
+                <div class="col-5 spec-val">Matte</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Finish Type</div>
+                <div class="col-4 spec-val">Bright Grey & Lion</div>
+                <div class="col-5 spec-val">Bright Grey & Lion</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Adjustable Headrest</div>
+                <div class="col-4 spec-val">No</div>
+                <div class="col-5 spec-val">Yes</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Maximum Load Capacity</div>
+                <div class="col-4 spec-val">280 KG</div>
+                <div class="col-5 spec-val">300 KG</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Origin of Manufacture</div>
+                <div class="col-4 spec-val">India</div>
+                <div class="col-5 spec-val">India</div>
+            </div>
+
+            <!-- Dimensions Section -->
+            <div class="spec-section-title">Dimensions</div>
+
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Width</div>
+                <div class="col-4 spec-val">265.32 cm</div>
+                <div class="col-5 spec-val">265.32 cm</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Height</div>
+                <div class="col-4 spec-val">76 cm</div>
+                <div class="col-5 spec-val">76 cm</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Depth</div>
+                <div class="col-4 spec-val">167.76 cm</div>
+                <div class="col-5 spec-val">167.76 cm</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Weight</div>
+                <div class="col-4 spec-val">45 KG</div>
+                <div class="col-5 spec-val">65 KG</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Seat Height</div>
+                <div class="col-4 spec-val">41.52 cm</div>
+                <div class="col-5 spec-val">41.52 cm</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Leg Height</div>
+                <div class="col-4 spec-val">5.46 cm</div>
+                <div class="col-5 spec-val">5.46 cm</div>
+            </div>
+
+            <!-- Warranty Section -->
+            <div class="spec-section-title">Warranty</div>
+
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Warranty Summary</div>
+                <div class="col-4 spec-val">1 Year Manufacturing Warranty</div>
+                <div class="col-5 spec-val">1.2 Year Manufacturing Warranty</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Warranty Service Type</div>
+                <div class="col-4 spec-val">For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com</div>
+                <div class="col-5 spec-val">For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Covered in Warranty</div>
+                <div class="col-4 spec-val">Warranty Against Manufacturing Defect</div>
+                <div class="col-5 spec-val">Warranty of the product is limited to manufacturing defects only.</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Not Covered in Warranty</div>
+                <div class="col-4 spec-val">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</div>
+                <div class="col-5 spec-val">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</div>
+            </div>
+            <div class="row spec-row align-items-center">
+                <div class="col-3 spec-label">Domestic Warranty</div>
+                <div class="col-4 spec-val">1 Year</div>
+                <div class="col-5 spec-val">3 Months</div>
+            </div>
+
+            <!-- Action Buttons Row -->
+            <div class="row spec-row border-0 mt-4 align-items-center">
+                <div class="col-3 spec-label"></div>
+                <div class="col-4 spec-val">
+                    <button class="add-to-cart-btn">Add To Cart</button>
+                </div>
+                <div class="col-5 spec-val">
+                    <button class="add-to-cart-btn">Add To Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Banner Section -->
+    <section class="features-banner">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-trophy"></i>
+                        <div>
+                            <h4>High Quality</h4>
+                            <p>crafted from top materials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="feature-item">
+                        <i class="fa-regular fa-square-check"></i>
+                        <div>
+                            <h4>Warranty Protection</h4>
+                            <p>Over 2 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div>
+                            <h4>Free Shipping</h4>
+                            <p>Order over 150 $</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <h4>24 / 7 Support</h4>
+                            <p>Dedicated support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 footer-brand">
+                    <h2>Funiro.</h2>
+                    <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <div class="footer-heading">Links</div>
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <div class="footer-heading">Help</div>
+                    <a href="#">Payment Options</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Privacy Policies</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-heading">Newsletter</div>
+                    <div class="newsletter-box d-flex gap-2">
+                        <input type="email" placeholder="Enter Your Email Address">
+                        <button type="button">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center text-md-start">
+                <p class="mb-0">2023 furino. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

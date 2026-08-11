@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Cart</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Furniro Logo" height="32">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons d-flex align-items-center gap-4">
+                    <a href="#"><i class="fa-regular fa-user"></i></a>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    <a href="cart.html" class="active"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <img src="assets/images/furniro-logo.png" alt="Furniro Emblem" class="banner-logo">
+            <h1>Cart</h1>
+            <p><a href="index.html">Home</a> <i class="fa-solid fa-chevron-right mx-2"></i> <span>Cart</span></p>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-container container">
+        <div class="row g-4 align-items-start">
+            
+            <!-- Cart Table Left Section -->
+            <div class="col-lg-8">
+                <div class="table-responsive">
+                    <table class="table cart-table align-middle">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <div class="img-box">
+                                            <img src="assets/images/asgaard-sofa-main.png" alt="Asgaard sofa">
+                                        </div>
+                                        <span class="product-title">Asgaard sofa</span>
+                                    </div>
+                                </td>
+                                <td class="price">Rs. 250,000.00</td>
+                                <td class="quantity">
+                                    <input type="number" value="1" min="1">
+                                </td>
+                                <td class="subtotal">Rs. 250,000.00</td>
+                                <td class="action text-end">
+                                    <button class="delete-btn" aria-label="Delete Item"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Cart Totals Right Box -->
+            <div class="col-lg-4">
+                <div class="cart-totals-card">
+                    <h2>Cart Totals</h2>
+                    <div class="totals-row">
+                        <span class="label">Subtotal</span>
+                        <span class="value subtotal-val">Rs. 250,000.00</span>
+                    </div>
+                    <div class="totals-row">
+                        <span class="label">Total</span>
+                        <span class="value total-val">Rs. 250,000.00</span>
+                    </div>
+                    <a href="checkout.html" class="checkout-btn">Check Out</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Banner Section -->
+    <section class="features-banner">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-trophy"></i>
+                        <div>
+                            <h4>High Quality</h4>
+                            <p>crafted from top materials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="feature-item">
+                        <i class="fa-regular fa-circle-check"></i>
+                        <div>
+                            <h4>Warranty Protection</h4>
+                            <p>Over 2 years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-box-open"></i>
+                        <div>
+                            <h4>Free Shipping</h4>
+                            <p>Order over 150 $</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <h4>24 / 7 Support</h4>
+                            <p>Dedicated support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 footer-brand">
+                    <h2>Funiro.</h2>
+                    <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <div class="footer-heading">Links</div>
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <div class="footer-heading">Help</div>
+                    <a href="#">Payment Options</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Privacy Policies</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-heading">Newsletter</div>
+                    <div class="newsletter-box d-flex gap-2">
+                        <input type="email" placeholder="Enter Your Email Address">
+                        <button type="button">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom text-center text-md-start">
+                <p class="mb-0">2023 furino. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

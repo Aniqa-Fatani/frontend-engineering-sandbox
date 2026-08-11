@@ -1,0 +1,74 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: url('../assets/images/bg-shop-banner.png') no-repeat center center/cover;
+    height: 316px;
+}
+
+/* Contact Inputs & Form Styling */
+.contact-form input,
+.contact-form textarea {
+    padding: 18px 25px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+
+.contact-form input {
+    height: 60px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #9F9F9F;
+}
+
+.submit-btn {
+    width: 237px;
+    background-color: #B88E2F;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #9A7424;
+}
+
+/* Features Banner Section */
+.features-banner {
+    background-color: #FAF4EF;
+}
+
+/* Footer Specific Styling */
+.newsletter-box input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* General Responsive Helpers */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 240px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
+}

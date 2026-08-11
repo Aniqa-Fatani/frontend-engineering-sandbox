@@ -1,0 +1,47 @@
+/* css/about.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.text-gold {
+    color: #B88E2F;
+}
+
+.bg-light-sand {
+    background-color: #FAF4EF;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: url('../assets/images/bg-shop-banner.png') no-repeat center center/cover;
+    height: 316px;
+}
+
+.tracking-wide {
+    letter-spacing: 1.5px;
+}
+
+/* Features Banner Section */
+.features-banner {
+    background-color: #FAF4EF;
+}
+
+/* Footer Styling */
+.newsletter-box input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 240px;
+    }
+}

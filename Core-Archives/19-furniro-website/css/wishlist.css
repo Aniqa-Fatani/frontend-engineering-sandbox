@@ -1,0 +1,51 @@
+/* css/wishlist.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+.text-gold {
+    color: #B88E2F;
+}
+
+.bg-gold {
+    background-color: #B88E2F;
+}
+
+.bg-gold:hover {
+    background-color: #A07B28;
+}
+
+.bg-light-sand {
+    background-color: #F9F1E7;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: url('../assets/images/bg-shop-banner.png') no-repeat center center/cover;
+    height: 316px;
+}
+
+/* Features Banner Section */
+.features-banner {
+    background-color: #FAF4EF;
+}
+
+/* Footer Styling */
+.newsletter-box input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 240px;
+    }
+}

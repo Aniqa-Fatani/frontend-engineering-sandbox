@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Shop</title>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS (For Offcanvas & Utilities) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Shop CSS -->
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar sticky-top bg-white">
+        <div class="container-fluid d-flex justify-content-between align-items-center px-lg-5">
+            <div class="logo">
+                <a href="index.html"><img src="assets/images/logo.png" alt="Furniro Logo"></a>
+            </div>
+            <nav class="nav-links d-none d-md-flex">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active" aria-current="page">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-icons d-flex align-items-center">
+                <a href="account.html" aria-label="Account Profile"><i class="fa-regular fa-user" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Search Products"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></a>
+                <a href="#" aria-label="View Wishlist"><i class="fa-regular fa-heart" aria-hidden="true"></i></a>
+                <!-- Offcanvas Trigger for Shopping Cart Sidebar -->
+                <a href="#cartSidebar" data-bs-toggle="offcanvas" role="button" aria-controls="cartSidebar" aria-label="Open Shopping Cart Drawer">
+                    <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Shop Banner Hero -->
+        <section class="shop-hero" aria-label="Shop Page Header">
+            <div class="hero-content">
+                <h1>Shop</h1>
+                <p><a href="index.html" class="text-decoration-none text-dark fw-bold">Home</a> &gt; Shop</p>
+            </div>
+        </section>
+
+        <!-- Filter & Sort Bar -->
+        <section class="filter-bar" aria-label="Filter and Sorting Controls">
+            <div class="filter-left">
+                <button class="filter-btn bg-transparent border-0" aria-label="Open Filter Settings">
+                    <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                    <span>Filter</span>
+                </button>
+                <div class="view-icons" role="region" aria-label="View Mode">
+                    <button class="bg-transparent border-0 p-0 text-dark" aria-label="Grid View"><i class="fa-solid fa-border-all active" aria-hidden="true"></i></button>
+                    <button class="bg-transparent border-0 p-0 text-dark" aria-label="List View"><i class="fa-solid fa-list" aria-hidden="true"></i></button>
+                </div>
+                <div class="divider" role="separator"></div>
+                <span class="results-count">Showing 1–16 of 32 results</span>
+            </div>
+            <div class="filter-right">
+                <div class="show-control">
+                    <label for="show-count">Show</label>
+                    <input type="text" id="show-count" value="16" readonly>
+                </div>
+                <div class="sort-control">
+                    <label for="sort-by">Sort by</label>
+                    <input type="text" id="sort-by" value="Default" readonly>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section class="shop-products" aria-labelledby="shop-products-heading">
+            <h2 id="shop-products-heading" class="visually-hidden">Product Listing</h2>
+            <div class="product-grid">
+
+                <!-- 1. Syltherine -->
+                <article class="product-card">
+                    <div class="badge badge-discount" aria-label="30 percent discount">-30%</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-syltherine.jpg" alt="Syltherine stylish cafe chair">
+                        <div class="hover-overlay">
+                            <a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a>
+                            <div class="actions">
+                                <span><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share</span>
+                                <a href="comparison.html" class="text-white text-decoration-none"><span><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Compare</span></a>
+                                <span><i class="fa-regular fa-heart" aria-hidden="true"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Syltherine</a></h3>
+                        <p class="subtitle">Stylish cafe chair</p>
+                        <div class="price-row">
+                            <span class="price">Rp 2.500.000</span>
+                            <del class="old-price"><span class="visually-hidden">Original price: </span>Rp 3.500.000</del>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Leviosa -->
+                <article class="product-card">
+                    <div class="img-container">
+                        <img src="assets/images/product-leviosa.jpg" alt="Leviosa stylish cafe chair">
+                        <div class="hover-overlay">
+                            <a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a>
+                            <div class="actions">
+                                <span><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share</span>
+                                <a href="comparison.html" class="text-white text-decoration-none"><span><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Compare</span></a>
+                                <span><i class="fa-regular fa-heart" aria-hidden="true"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Leviosa</a></h3>
+                        <p class="subtitle">Stylish cafe chair</p>
+                        <div class="price-row">
+                            <span class="price">Rp 2.500.000</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Lolito -->
+                <article class="product-card">
+                    <div class="badge badge-discount" aria-label="50 percent discount">-50%</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-lolito.jpg" alt="Lolito luxury big sofa">
+                        <div class="hover-overlay">
+                            <a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a>
+                            <div class="actions">
+                                <span><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share</span>
+                                <a href="comparison.html" class="text-white text-decoration-none"><span><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Compare</span></a>
+                                <span><i class="fa-regular fa-heart" aria-hidden="true"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Lolito</a></h3>
+                        <p class="subtitle">Luxury big sofa</p>
+                        <div class="price-row">
+                            <span class="price">Rp 7.000.000</span>
+                            <del class="old-price"><span class="visually-hidden">Original price: </span>Rp 14.000.000</del>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Respira -->
+                <article class="product-card">
+                    <div class="badge badge-new">New</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-respira.jpg" alt="Respira outdoor bar table and stool">
+                        <div class="hover-overlay">
+                            <a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a>
+                            <div class="actions">
+                                <span><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share</span>
+                                <a href="comparison.html" class="text-white text-decoration-none"><span><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Compare</span></a>
+                                <span><i class="fa-regular fa-heart" aria-hidden="true"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Respira</a></h3>
+                        <p class="subtitle">Outdoor bar table and stool</p>
+                        <div class="price-row">
+                            <span class="price">Rp 500.000</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Grifo -->
+                <article class="product-card">
+                    <div class="img-container">
+                        <img src="assets/images/product-grifo.jpg" alt="Grifo night lamp">
+                        <div class="hover-overlay">
+                            <a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a>
+                            <div class="actions">
+                                <span><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share</span>
+                                <a href="comparison.html" class="text-white text-decoration-none"><span><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Compare</span></a>
+                                <span><i class="fa-regular fa-heart" aria-hidden="true"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Grifo</a></h3>
+                        <p class="subtitle">Night lamp</p>
+                        <div class="price-row"><span class="price">Rp 1.500.000</span></div>
+                    </div>
+                </article>
+
+                <!-- 6. Muggo -->
+                <article class="product-card">
+                    <div class="badge badge-new">New</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-muggo.jpg" alt="Muggo small ceramic mug">
+                        <div class="hover-overlay">
+                            <a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a>
+                            <div class="actions">
+                                <span><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share</span>
+                                <a href="comparison.html" class="text-white text-decoration-none"><span><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Compare</span></a>
+                                <span><i class="fa-regular fa-heart" aria-hidden="true"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Muggo</a></h3>
+                        <p class="subtitle">Small mug</p>
+                        <div class="price-row"><span class="price">Rp 150.000</span></div>
+                    </div>
+                </article>
+
+                <!-- 7. Pingky -->
+                <article class="product-card">
+                    <div class="badge badge-discount" aria-label="50 percent discount">-50%</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-pingky.jpg" alt="Pingky cute bed set">
+                        <div class="hover-overlay">
+                            <a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a>
+                            <div class="actions">
+                                <span><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share</span>
+                                <a href="comparison.html" class="text-white text-decoration-none"><span><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Compare</span></a>
+                                <span><i class="fa-regular fa-heart" aria-hidden="true"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Pingky</a></h3>
+                        <p class="subtitle">Cute bed set</p>
+                        <div class="price-row">
+                            <span class="price">Rp 7.000.000</span>
+                            <del class="old-price"><span class="visually-hidden">Original price: </span>Rp 14.000.000</del>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8. Potty -->
+                <article class="product-card">
+                    <div class="badge badge-new">New</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-potty.jpg" alt="Potty minimalist flower pot">
+                        <div class="hover-overlay">
+                            <a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a>
+                            <div class="actions">
+                                <span><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share</span>
+                                <a href="comparison.html" class="text-white text-decoration-none"><span><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Compare</span></a>
+                                <span><i class="fa-regular fa-heart" aria-hidden="true"></i> Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Potty</a></h3>
+                        <p class="subtitle">Minimalist flower pot</p>
+                        <div class="price-row"><span class="price">Rp 500.000</span></div>
+                    </div>
+                </article>
+
+                <!-- 9. Syltherine (Variant) -->
+                <article class="product-card">
+                    <div class="badge badge-discount" aria-label="30 percent discount">-30%</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-syltherine.jpg" alt="Syltherine cafe chair">
+                        <div class="hover-overlay"><a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a></div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Syltherine</a></h3>
+                        <p class="subtitle">Stylish cafe chair</p>
+                        <div class="price-row"><span class="price">Rp 2.500.000</span><del class="old-price">Rp 3.500.000</del></div>
+                    </div>
+                </article>
+
+                <!-- 10. Leviosa (Variant) -->
+                <article class="product-card">
+                    <div class="img-container">
+                        <img src="assets/images/product-leviosa.jpg" alt="Leviosa cafe chair">
+                        <div class="hover-overlay"><a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a></div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Leviosa</a></h3>
+                        <p class="subtitle">Stylish cafe chair</p>
+                        <div class="price-row"><span class="price">Rp 2.500.000</span></div>
+                    </div>
+                </article>
+
+                <!-- 11. Lolito (Variant) -->
+                <article class="product-card">
+                    <div class="badge badge-discount" aria-label="50 percent discount">-50%</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-lolito.jpg" alt="Lolito sofa">
+                        <div class="hover-overlay"><a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a></div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Lolito</a></h3>
+                        <p class="subtitle">Luxury big sofa</p>
+                        <div class="price-row"><span class="price">Rp 7.000.000</span><del class="old-price">Rp 14.000.000</del></div>
+                    </div>
+                </article>
+
+                <!-- 12. Respira (Variant) -->
+                <article class="product-card">
+                    <div class="badge badge-new">New</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-respira.jpg" alt="Respira bar stool">
+                        <div class="hover-overlay"><a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a></div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Respira</a></h3>
+                        <p class="subtitle">Outdoor bar table and stool</p>
+                        <div class="price-row"><span class="price">Rp 500.000</span></div>
+                    </div>
+                </article>
+
+                <!-- 13. Grifo (Variant) -->
+                <article class="product-card">
+                    <div class="img-container">
+                        <img src="assets/images/product-grifo.jpg" alt="Grifo night lamp">
+                        <div class="hover-overlay"><a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a></div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Grifo</a></h3>
+                        <p class="subtitle">Night lamp</p>
+                        <div class="price-row"><span class="price">Rp 1.500.000</span></div>
+                    </div>
+                </article>
+
+                <!-- 14. Muggo (Variant) -->
+                <article class="product-card">
+                    <div class="badge badge-new">New</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-muggo.jpg" alt="Muggo ceramic mug">
+                        <div class="hover-overlay"><a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a></div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Muggo</a></h3>
+                        <p class="subtitle">Small mug</p>
+                        <div class="price-row"><span class="price">Rp 150.000</span></div>
+                    </div>
+                </article>
+
+                <!-- 15. Pingky (Variant) -->
+                <article class="product-card">
+                    <div class="badge badge-discount" aria-label="50 percent discount">-50%</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-pingky.jpg" alt="Pingky bed set">
+                        <div class="hover-overlay"><a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a></div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Pingky</a></h3>
+                        <p class="subtitle">Cute bed set</p>
+                        <div class="price-row"><span class="price">Rp 7.000.000</span><del class="old-price">Rp 14.000.000</del></div>
+                    </div>
+                </article>
+
+                <!-- 16. Potty (Variant) -->
+                <article class="product-card">
+                    <div class="badge badge-new">New</div>
+                    <div class="img-container">
+                        <img src="assets/images/product-potty.jpg" alt="Potty flower pot">
+                        <div class="hover-overlay"><a href="cart.html" class="add-btn text-decoration-none text-center">Add to cart</a></div>
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="single-product.html" class="product-title-link">Potty</a></h3>
+                        <p class="subtitle">Minimalist flower pot</p>
+                        <div class="price-row"><span class="price">Rp 500.000</span></div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Pagination -->
+            <nav class="pagination" aria-label="Product Pagination">
+                <button class="page-btn active" aria-current="page">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn next-btn">Next</button>
+            </nav>
+        </section>
+
+        <!-- Feature Bar -->
+        <section class="features-bar" aria-label="Store Advantages">
+            <div class="feature-item">
+                <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+                <div>
+                    <h4>High Quality</h4>
+                    <p>crafted from top materials</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                <div>
+                    <h4>Warranty Protection</h4>
+                    <p>Over 2 years</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-hand-holding-box" aria-hidden="true"></i>
+                <div>
+                    <h4>Free Shipping</h4>
+                    <p>Order over 150 $</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                <div>
+                    <h4>24 / 7 Support</h4>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Offcanvas Shopping Cart Sidebar Component -->
+    <div class="offcanvas offcanvas-end cart-sidebar-offcanvas" tabindex="-1" id="cartSidebar" aria-labelledby="cartSidebarLabel">
+        <div class="offcanvas-header pb-3 border-bottom">
+            <h5 class="offcanvas-title fw-bold fs-4" id="cartSidebarLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close Shopping Cart"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <div class="cart-items-list">
+                <!-- Item 1 -->
+                <div class="cart-item d-flex align-items-center justify-content-between py-3 border-bottom">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/images/asgaard-sofa-main.png" alt="Asgaard Sofa thumbnail" class="rounded" width="80" height="80" style="object-fit: cover;">
+                        <div>
+                            <h6 class="mb-1 fw-bold">Asgaard sofa</h6>
+                            <p class="mb-0 text-muted">1 X <span class="text-warning fw-semibold">Rp 250.000.00</span></p>
+                        </div>
+                    </div>
+                    <button class="btn btn-sm text-secondary" aria-label="Remove Asgaard Sofa from cart"><i class="fa-solid fa-circle-xmark fs-5"></i></button>
+                </div>
+                <!-- Item 2 -->
+                <div class="cart-item d-flex align-items-center justify-content-between py-3 border-bottom">
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="assets/images/asgaard-thumb-2.png" alt="Casaliving Sofa thumbnail" class="rounded" width="80" height="80" style="object-fit: cover;">
+                        <div>
+                            <h6 class="mb-1 fw-bold">Casaliving Wood</h6>
+                            <p class="mb-0 text-muted">1 X <span class="text-warning fw-semibold">Rp 270.000.00</span></p>
+                        </div>
+                    </div>
+                    <button class="btn btn-sm text-secondary" aria-label="Remove Casaliving Wood from cart"><i class="fa-solid fa-circle-xmark fs-5"></i></button>
+                </div>
+            </div>
+
+            <div class="cart-sidebar-footer pt-3">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <span class="fw-semibold">Subtotal</span>
+                    <span class="fw-bold text-warning fs-5">Rp 520.000.00</span>
+                </div>
+                <hr>
+                <div class="row g-2 pt-2">
+                    <div class="col-4">
+                        <a href="cart.html" class="btn btn-outline-dark w-100 rounded-pill btn-sm py-2">Cart</a>
+                    </div>
+                    <div class="col-4">
+                        <a href="checkout.html" class="btn btn-outline-dark w-100 rounded-pill btn-sm py-2">Checkout</a>
+                    </div>
+                    <div class="col-4">
+                        <a href="comparison.html" class="btn btn-outline-dark w-100 rounded-pill btn-sm py-2">Comparison</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col col-brand">
+                <h2>Funiro.</h2>
+                <address class="text-muted mb-0" style="font-style: normal;">
+                    400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA
+                </address>
+            </div>
+            <div class="footer-col">
+                <span class="footer-head">Links</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <span class="footer-head">Help</span>
+                <ul>
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col col-newsletter">
+                <span class="footer-head">Newsletter</span>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <label for="shop-newsletter-email" class="visually-hidden">Enter Your Email Address</label>
+                    <input type="email" id="shop-newsletter-email" placeholder="Enter Your Email Address" required autocomplete="email">
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2023 furino. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
