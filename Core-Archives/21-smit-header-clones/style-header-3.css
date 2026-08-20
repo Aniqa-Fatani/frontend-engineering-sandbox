@@ -1,0 +1,118 @@
+:root {
+  --font-family: 'Poppins', sans-serif;
+  --bg-color: #F8F5FE;
+  --purple-main: #9B51E0;
+  --purple-hover: #883cd1;
+  --text-dark: #1E1E1E;
+  --text-muted: #6B7280;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+}
+
+.hero-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.logo-img {
+  height: 28px;
+  width: auto;
+}
+
+.nav-text {
+  color: var(--text-dark) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-text:hover {
+  color: var(--purple-main) !important;
+}
+
+/* Hero Typography */
+.hero-title {
+  font-size: 2.85rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.text-purple-highlight {
+  color: var(--purple-main);
+}
+
+.hero-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 440px;
+}
+
+/* Buttons */
+.btn-purple {
+  background-color: var(--purple-main);
+  border: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.btn-purple:hover {
+  background-color: var(--purple-hover);
+  color: #fff;
+}
+
+/* Subscription Form Card */
+.subscribe-card {
+  max-width: 440px;
+  border: 1px solid rgba(155, 81, 224, 0.15);
+}
+
+.subscribe-card input::placeholder {
+  color: #A0AEC0;
+  font-size: 0.875rem;
+}
+
+.subscribe-card input:focus {
+  box-shadow: none;
+}
+
+/* Visual Stack Styling */
+.figma-bg-art {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 520px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.figma-desktop-img {
+  max-height: 460px;
+  object-fit: contain;
+  filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.08));
+}
+
+/* Responsive Tweaks */
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .subscribe-card {
+    max-width: 100%;
+  }
+
+  .figma-bg-art {
+    max-width: 100%;
+  }
+}
